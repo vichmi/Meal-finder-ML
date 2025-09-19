@@ -1,0 +1,108 @@
+{
+    "vegan": [
+        "beef", "pork", "chicken", "turkey", "lamb", "duck", "goose",
+        "fish", "salmon", "tuna", "cod", "trout", "sardines",
+        "shrimp", "prawns", "crab", "lobster", "mussels", "oysters",
+        "squid", "octopus", "anchovy", "anchovies", "clam", "scallop",
+
+        "egg", "eggs", "yolk", "egg yolk", "egg white", "powdered egg",
+
+        "milk", "cow milk", "goat milk", "sheep milk",
+        "cream", "butter", "cheese", "cheddar", "mozzarella", "parmesan",
+        "feta", "yogurt", "sour cream", "ghee",
+        "whey", "casein", "caseinate",
+
+        "lard", "tallow", "gelatin", "honey", "beeswax", "royal jelly",
+
+        "fish sauce", "oyster sauce", "anchovy paste", "shrimp paste",
+        "bonito flakes", "worcestershire sauce",
+
+        "carmine", "cochineal", "isinglass", "shellac",
+        "albumin", "pepsin", "rennet"
+    ],
+    "vegaterians": [
+        "beef", "pork", "chicken", "turkey", "lamb", "duck", "goose",
+        "fish", "salmon", "tuna", "cod", "trout", "sardines",
+        "shrimp", "prawns", "crab", "lobster", "mussels", "oysters",
+        "squid", "octopus", "anchovy", "anchovies", "clam", "scallop",
+
+        "lard", "tallow", "gelatin",
+
+        "fish sauce", "oyster sauce", "anchovy paste", "shrimp paste",
+        "bonito flakes", "worcestershire sauce",  
+        "isinglass"
+    ],
+    "lactose-intolerant": [
+        "milk", "cow milk", "goat milk", "sheep milk", "condensed milk", "powdered milk", "evaporated milk",
+        "cream", "heavy cream", "sour cream", "butter", "cheese", "cheddar", "mozzarella", "parmesan",
+        "feta", "ricotta", "cream cheese", "gouda", "brie", "blue cheese", "camembert",
+
+        "yogurt", "greek yogurt", "kefir", "buttermilk",
+
+        "ghee", "custard", "ice cream", "milk chocolate",
+
+        "whey", "casein", "caseinate", "lactose"
+    ],
+    "carnivore": [
+        "tomato", "onion", "garlic", "potato", "carrot", "broccoli", "cabbage",
+        "pepper", "spinach", "lettuce", "cucumber", "zucchini", "eggplant",
+        "cauliflower", "peas", "beans", "lentils", "chickpeas", "corn",
+
+        "apple", "banana", "orange", "lemon", "lime", "grape", "pear",
+        "peach", "apricot", "plum", "cherry", "strawberry", "blueberry",
+        "raspberry", "blackberry", "melon", "watermelon", "kiwi", "mango",
+        "pineapple", "coconut", "fig", "pomegranate", "date",
+
+        "wheat", "flour", "bread", "pasta", "rice", "oats", "barley",
+        "rye", "cornmeal", "tortilla", "cracker",
+
+        "almond", "hazelnut", "peanut", "walnut", "cashew", "pistachio",
+        "chia seeds", "flaxseed", "sunflower seeds", "pumpkin seeds",
+
+        "sugar", "brown sugar", "maple syrup", "agave syrup", "molasses",
+
+        "olive oil", "sunflower oil", "canola oil", "soybean oil",
+        "corn oil", "coconut oil", "palm oil", "avocado oil",
+
+        "basil", "parsley", "cilantro", "dill", "oregano", "thyme",
+        "rosemary", "sage", "mint", "cinnamon", "nutmeg", "clove",
+        "curry", "paprika", "ginger", "turmeric"
+    ],
+    "gluten-free": [
+        "wheat", "flour", "all-purpose flour", "whole wheat", "graham flour",
+        "durum", "semolina", "spelt", "farro", "einkorn", "kamut",
+
+        "barley", "malt", "malt extract", "malt syrup", "malt vinegar",
+
+        "rye",
+
+        "oats", "oatmeal", "oat bran", "oat flour",
+
+        "bread", "bagel", "pita", "tortilla", "naan", "bun", "roll",
+        "cracker", "biscuit", "croissant", "muffin", "pastry",
+
+        "pasta", "spaghetti", "macaroni", "noodles", "ramen", "lasagna",
+
+        "beer", "lager", "ale", "stout"
+    ],
+    "keto": [
+        "sugar", "brown sugar", "powdered sugar", "cane sugar",
+        "honey", "maple syrup", "agave syrup", "molasses", "corn syrup",
+
+        "wheat", "flour", "all-purpose flour", "bread", "pasta",
+        "rice", "oats", "barley", "rye", "cornmeal", "quinoa",
+        "couscous", "bulgur",
+
+        "beans", "black beans", "kidney beans", "pinto beans", "chickpeas",
+        "lentils", "peas", "soybeans",
+
+        "potato", "sweet potato", "yam", "parsnip", "beetroot",
+        "carrot", "corn",
+
+        "banana", "apple", "pear", "grape", "mango", "pineapple",
+        "watermelon", "melon", "cherry", "plum", "apricot",
+        "orange", "tangerine",
+
+        "soda", "juice", "beer"
+    ]
+}
