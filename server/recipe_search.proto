@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package recipe;
+
+service RecipeSearch {
+  rpc Search (SearchRequest) returns (SearchResponse);
+}
+
+message SearchRequest {
+  string query = 1;
+  int32 top_k = 2;
+}
+
+message Recipe {
+  string title = 1;
+  string instructions = 2;
+  repeated string ingredients = 3;
+  repeated string tags = 4;
+  repeated string categories = 5;
+  repeated string diets = 6;
+  string area = 7;
+  double score = 8;
+}
+
+message SearchResponse {
+  repeated Recipe results = 1;
+}
