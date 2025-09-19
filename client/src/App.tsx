@@ -1,9 +1,13 @@
+import Home from './pages/Home.tsx'
+import { BrowserRouter, Routes, Route } from 'react-router';
 
 function App() {
   return (
-    <>
-    <p className="">Test</p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
