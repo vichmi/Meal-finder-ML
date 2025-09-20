@@ -17,7 +17,14 @@ def build_recipe_text(recipe):
     parts.extend(recipe.get("tags", []))
     parts.extend(recipe.get("diets", []))
     parts.extend([ing.get("name", "") for ing in recipe.get("ingredients", [])])
-    return " ".join([str(p).lower().strip() for p in parts if p])
+    text = " ".join([str(p).lower().strip() for p in parts if p])
+    print(text)
+    return text
+
+def embed_recipe(recipe):
+    texts = build_recipe_text(recipe)
+    embeddings = model.encode(texts, batch_size=32, convert_to_numpy=True)
+    return embeddings
 
 def embed_and_update():
     skip = 0

@@ -101,3 +101,19 @@ def add_diets():
             )
         if bulk_ops:
             result = recipes.bulk_write(bulk_ops)
+
+
+def allrecipes_links_file():
+    pattern = re.compile(r"https?://[^/]+\.com/article(/|$)")
+    clean_links = []
+    with open('allrecipes_links.txt', "r", encoding='utf-8') as f:
+        for line in f:
+            url = line.strip()
+            if not url: continue
+            if not pattern.search(url):
+                clean_links.append(url)
+
+    with open('clean_links.txt', 'w', encoding='utf-8') as f:
+        for link in clean_links:
+            f.write(link+'\n')
+    print('done!')

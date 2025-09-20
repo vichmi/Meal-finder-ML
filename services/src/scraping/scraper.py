@@ -6,6 +6,7 @@ import hashlib
 from pymongo.errors import DuplicateKeyError
 
 recipes = db['recipes']
+recipes_bg = db['recipes_bg']
 
 def recipe_hash(title: str, ingredients: list[dict]) -> str:
     normalized_title = title.lower().strip() if title else ""
@@ -41,6 +42,7 @@ def get_data_from_TheMealDB():
             "instructions": meal.get("strInstructions"),
             "ingredients": ingredients,
             "tags": meal["strTags"].split(",") if meal.get("strTags") else [],
+            "img": meal['strMealThumb']
         }
 
     for i in range(97, 123):
@@ -113,49 +115,53 @@ def get_data_from_All_Recipes():
         return None
 
     def get_recipes():
-        with open("recipes_links.txt", "r") as f:
+        with open("clean_links.txt", "r") as f:
             links = f.read().splitlines()
-            index = 0;
+            index = 0
             for url in links:
                 index += 1
-                if index < 5838: continue
+                if index <= 217: continue
                 response = requests.get(url, headers=headers)
                 if response.status_code == 200:
                     soup = BeautifulSoup(response.text, "html.parser")
-                    title = soup.find("h1", class_='article-heading').text.strip()
-                    ingredients = [split_ingredient(x.text.strip()) for x in soup.find_all('li', class_='mm-recipes-structured-ingredients__list-item')]
-                    if soup.find('div', class_='mm-recipes-steps__content') is None: continue
-                    instructions = soup.find('div', class_='mm-recipes-steps__content').text.strip()
-                    source = 'allrecipes'
-                    source_id = extract_id(url)
-                    tags = [clean_text(x.text) for x in soup.find_all('li', class_='mntl-breadcrumbs__item')]
-                    if 'Recipes' in tags:
-                        tags.remove('Recipes')
-                    informations = []
-                    info_getter = soup.find_all('div', class_='mm-recipes-details__item')
-                    if info_getter:
-                        for info in info_getter:
-                            informations.append({
-                                'label': clean_text(info.find('div', class_='mm-recipes-details__label').text),
-                                'value': clean_text(info.find('div', class_='mm-recipes-details__value').text)
-                            }) 
-                    print(f'{index}. Scraping: {title} with id: {source_id}')
-                    recipes.update_one(
-                        {"source": source, "source_id": source_id},
-                        {"$set": {
-                            "title": title,
-                            "ingredients": ingredients,
-                            "information": informations,
-                            "categories": None,
-                            "tags": tags,
-                            "recipe_hash": recipe_hash(title, ingredients),
-                            "source": source,
-                            "source_id": source_id,
-                            "area": None,
-                            "instructions": instructions
-                        }},
-                        upsert=True
-                    )
+                    # title = soup.find("h1", class_='article-heading').text.strip()
+                    # ingredients = [split_ingredient(x.text.strip()) for x in soup.find_all('li', class_='mm-recipes-structured-ingredients__list-item')]
+                    # if soup.find('div', class_='mm-recipes-steps__content') is None: continue
+                    # instructions = soup.find('div', class_='mm-recipes-steps__content').text.strip()
+                    try:
+                        source = 'allrecipes'
+                        source_id = extract_id(url)
+                        img = soup.find('img', class_='primary-image__image')
+                        img_source = ''
+                        if img is None:
+                            img = soup.select_one('#photo-dialog__item_1-0 > figure > div > img')
+                            if 'data-src' in img.attrs:
+                                img_source = img.attrs['data-src']
+                        
+                        if 'src' in img.attrs:
+                            img_source = img.attrs['src']
+                        # tags = [clean_text(x.text) for x in soup.find_all('li', class_='mntl-breadcrumbs__item')]
+                        # if 'Recipes' in tags:
+                        #     tags.remove('Recipes')
+                        # informations = []
+                        # info_getter = soup.find_all('div', class_='mm-recipes-details__item')
+                        # if info_getter:
+                        #     for info in info_getter:
+                        #         informations.append({
+                        #             'label': clean_text(info.find('div', class_='mm-recipes-details__label').text),
+                        #             'value': clean_text(info.find('div', class_='mm-recipes-details__value').text)
+                        #         }) 
+                        print(f"{index}. {img_source}")
+                        recipes.update_one(
+                            {"source": source, "source_id": source_id},
+                            {"$set": {
+                                "img": img_source
+                            }},
+                            upsert=True
+                        )
+                    except:
+                        print(f'Error url: {url}')        
                 else: print('SOMETHING WENT TOTATLLY WRONG')
             print('everything extracted')
     get_recipes()
+# get_data_from_All_Recipes()
