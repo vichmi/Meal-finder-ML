@@ -1,1 +1,43 @@
+@tailwind base;
 @import "tailwindcss";
+:root {
+  --primary: #A4193D;
+  --secondary: #FFDFB9;
+  --bg: #fff;
+  --fg: #0b0b0c;
+  --muted-fg: rgba(0,0,0,0.58);
+  --card: #ffffff;
+  --border: rgba(0,0,0,0.12);
+  --brand: #A4193D;
+}
+
+.dark {
+  --primary: #0A174E;
+  --secondary: #F5D042;
+  --bg: #0b0d12;
+  --fg: #f3f4f6;
+  --muted-fg: rgba(255,255,255,0.65);
+  --card: #0f1219;
+  --border: rgba(255,255,255,0.12);
+  --brand: #F5D042;
+}
+
+/* Custom scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+  background: var(--card);
+  border-radius: 9999px;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 9999px;
+  transition: background 0.2s ease-in-out;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover, #4b5563); /* fallback ако няма var */
+}

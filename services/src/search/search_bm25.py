@@ -9,7 +9,6 @@ sys.stdout.reconfigure(encoding='utf-8')
 recipes = db["recipes"]
 
 # Implementing BM25 algorithm
-
 def set_dictionary_queries():
     queries = {}
     global recipes
@@ -62,7 +61,7 @@ def inverse_document_frequency(t):
     nt = query_load.get(t, 0)
     return math.log( (number_of_documents - nt + 0.5)/(nt + 0.5) )
 
-def search(query: str, top_k=10) -> list[dict]:
+def search(query: str, top_k: int) -> list[dict]:
     queries = query.split(' ')
     global recipes
     cursor = list(recipes.find({}))
@@ -87,7 +86,8 @@ def search(query: str, top_k=10) -> list[dict]:
             'title': recipe['title'],
             'categories': recipe['categories'],
             'diets': recipe['diets'],
-            'score': float(score)
+            'score': float(score),
+            'img': str(recipe.get('img', "")or '')
         })
     results = sorted(scores, key=lambda x: x['score'], reverse=True)
     return results[:top_k]

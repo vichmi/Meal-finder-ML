@@ -20,6 +20,7 @@ message Recipe {
   repeated string diets = 6;
   string area = 7;
   double score = 8;
+  string img = 9;
 }
 
 message SearchResponse {

@@ -4,13 +4,14 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
-
-app.use(bodyParser())
+const connectDB = require('./db.js');
+app.use(bodyParser.urlencoded())
 app.use(cors());
+app.use(express.json());
 
 const routes = require('./routes/index.js');
 app.use('/api', routes);
 
-
-
-app.listen(process.env.PORT, () => {console.log(`Server started at: http://localhost:${process.env.PORT}`)});
+connectDB().then(() => {
+    app.listen(process.env.PORT, () => {console.log(`Server started at: http://localhost:${process.env.PORT}`)});
+})
