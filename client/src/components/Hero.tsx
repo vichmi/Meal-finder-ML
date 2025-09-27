@@ -40,7 +40,7 @@ export default function Hero({ recipe }: Props) {
               </p>
             </div>
             <div className="mt-2">
-              <a href="#" className="inline-flex items-center gap-2 rounded-xl bg-[var(--secondary)] px-4 py-2 font-medium text-[var(--primary-ink)] hover:opacity-90">
+              <a href={`/recipe/${recipe._id}`} className="inline-flex items-center gap-2 rounded-xl bg-[var(--secondary)] px-4 py-2 font-medium text-[var(--primary-ink)] hover:opacity-90">
                 Cook this
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

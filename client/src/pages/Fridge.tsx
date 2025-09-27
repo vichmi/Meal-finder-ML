@@ -286,7 +286,7 @@ export default function Fridge() {
             ) : (
               <ul className="flex flex-col gap-2">
                 {fridgeItems.map((it) => (
-                  <li key={it} className="flex items-center justify-between p-2 rounded hover:bg-gray-50">
+                  <li key={it} className="flex items-center justify-between p-2 rounded hover:bg-[var(--hover)]">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded">🥬</div>
                       <div>{it}</div>

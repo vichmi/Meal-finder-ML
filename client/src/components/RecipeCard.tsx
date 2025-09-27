@@ -1,9 +1,10 @@
 import React from "react";
 import type { Recipe } from "../types/recipes";
 export default function RecipeCard({ r }: { r: Recipe }) {
+
   return (
     <a
-      href="#"
+      href={`/recipe/${r.id}`}
       className="group relative w-64 shrink-0 snap-center overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--card)] shadow-sm"
     >
       <div className="relative">

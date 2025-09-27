@@ -9,6 +9,7 @@
   --card: #ffffff;
   --border: rgba(0,0,0,0.12);
   --brand: #A4193D;
+  --hover: #cecece;
 }
 
 .dark {
@@ -20,6 +21,7 @@
   --card: #0f1219;
   --border: rgba(255,255,255,0.12);
   --brand: #F5D042;
+  --hover: #3b3b3b;
 }
 
 /* Custom scrollbar */

@@ -8,17 +8,6 @@ from pymongo.errors import DuplicateKeyError
 recipes = db['recipes']
 recipes_bg = db['recipes_bg']
 
-def recipe_hash(title: str, ingredients: list[dict]) -> str:
-    normalized_title = title.lower().strip() if title else ""
-
-    norm_ings = sorted([
-        ing["name"].lower().strip()
-        for ing in ingredients
-        if ing.get("name")
-    ])
-
-    key = normalized_title + "|" + "|".join(norm_ings)
-    return hashlib.sha256(key.encode()).hexdigest()
 
 # TheMealDB.com
 def get_data_from_TheMealDB():

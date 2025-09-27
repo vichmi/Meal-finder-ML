@@ -2,6 +2,10 @@ const router = require('express').Router();
 const Recipe = require('../models/Recipe.js');
 const grpcClient = require('../grpc_client.js');
 
+const authRoutes = require('./auth.js');
+
+router.use('/auth/', authRoutes);
+
 router.get('/recommendations', async (req, res) => {
     try {
         const randomRecipe = await Recipe.aggregate([{ $sample: { size: 1 } }]);
@@ -44,6 +48,21 @@ router.get('/search', async (req, res) => {
         return res.json(recipes)
     } catch(err) {
         console.error('Error performing search:', err);
+        res.status(500).json({ message: 'Server error', error: err.message });
+    }
+});
+
+router.get('/recipe/:id', async (req, res) => {
+    try {
+        const recipeId = req.params.id;
+        const recipe = await Recipe.findById(recipeId).select('-_id -embedding -source_id -recipe_hash')
+        console.log(recipeId)
+        if (!recipe) {
+            return res.status(404).json({ message: 'Recipe not found' });
+        }
+        res.json(recipe);
+    } catch (err) {
+        console.error('Error fetching recipe by ID:', err);
         res.status(500).json({ message: 'Server error', error: err.message });
     }
 });

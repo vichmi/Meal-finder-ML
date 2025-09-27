@@ -21,6 +21,7 @@ message Recipe {
   string area = 7;
   double score = 8;
   string img = 9;
+  string id = 10;
 }
 
 message SearchResponse {

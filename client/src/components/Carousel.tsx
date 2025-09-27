@@ -22,7 +22,6 @@ export default function Carousel({ title }: { title: string;}) {
     axios.get('/category?title=' + title)
     .then(res => {
       if(res.status == 200) {
-        console.log(res.data);
         setCatRecipes(res.data);
       }
     })

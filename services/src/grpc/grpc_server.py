@@ -20,7 +20,8 @@ class RecipeSearchService(recipe_search_pb2_grpc.RecipeSearchServicer):
                 diets=[str(d) for d in (r.get('diets') or [])],
                 area=str(r.get('area', "")),
                 score=float(r['score']),
-                img=str(r.get('img', "") or '')
+                img=str(r.get('img', "") or ''),
+                id=str(r.get('id', ""))
             ))
         
         return recipe_search_pb2.SearchResponse(results=recipes)

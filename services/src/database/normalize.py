@@ -1,8 +1,47 @@
 import json
 import re
+import hashlib
 from pymongo import MongoClient, UpdateOne
 from src.database.db import *
 recipes = db["recipes"]
+
+def recipe_hash(title: str, ingredients: list[dict]) -> str:
+    normalized_title = title.lower().strip() if title else ""
+
+    norm_ings = sorted([
+        ing["name"].lower().strip()
+        for ing in ingredients
+        if ing.get("name")
+    ])
+
+    key = normalized_title + "|" + "|".join(norm_ings)
+    return hashlib.sha256(key.encode()).hexdigest()
+
+def push_to_database(recipe: dict, collection):
+    try:
+
+        recipe['title'] = recipe.get('title', '').strip().lower()
+        recipe['area'] = recipe.get('area', '').strip().lower()
+        recipe['categories'] = [cat.strip().lower() for cat in recipe.get('categories', [])]
+        recipe['tags'] = [tag.strip().lower() for tag in recipe.get('tags', [])]
+        for ing in recipe.get('ingredients', []):
+            ing['amount'] = ing.get('amount', '').strip().lower()
+            ing['name'] = ing.get('name', '').strip().lower()
+        if isinstance(recipe.get('instructions'), str):
+            recipe['instructions'] = [step.strip().lower() for step in recipe['instructions'].splitlines() if step.strip()]
+        elif isinstance(recipe.get('instructions'), list):
+            recipe['instructions'] = [step.strip().lower() for step in recipe['instructions'] if isinstance(step, str) and step.strip()]
+        recipe['information'] = [info.strip().lower() for info in recipe.get('information', [])]
+        recipe['img'] = recipe.get('img', '')
+        recipe['source'] = recipe.get('source', '').strip()
+        recipe['source_id'] = recipe.get('source_id', '').strip()
+        recipe['recipe_hash'] = recipe_hash(recipe['title'], recipe.get('ingredients', []))
+        
+        # Determing categories, tags, diets and embedding !!!! 
+
+        db[collection].insert_one(recipe)
+    except Exception as e:
+        print(f"Error inserting recipe: {e}")
 
 def parse_time_to_minutes(time_str: str) -> int | None:
     if not time_str:
