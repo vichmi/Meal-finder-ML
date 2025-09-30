@@ -16,6 +16,7 @@ import { ProtectedRoute } from './pages/ProtectedRoute.tsx'
 import CreateRecipe from './pages/CreateRecipe.tsx'
 import CreateRecipeButton from './components/CreateRecipeButton.tsx'
 import Bookmarks from './pages/Bookmarks.tsx'
+import ShoppingList from './pages/ShoppingList.tsx'
 
 function RedirectTo404() {
   useEffect(() => {
@@ -57,6 +58,14 @@ function App() {
               element={
                 <ProtectedRoute>
                     <Bookmarks />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path='/shoppingList'
+              element={
+                <ProtectedRoute>
+                    <ShoppingList />
                 </ProtectedRoute>
               }
             />

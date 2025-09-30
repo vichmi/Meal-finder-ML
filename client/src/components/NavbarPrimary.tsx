@@ -88,6 +88,12 @@ export default function NavbarPrimary() {
                 <path d="M6 4c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v18l-7-4-7 4V4z" />
               </svg>
             </a>
+
+            <a
+              aria-label="Bookmarked recipes"
+              className="relative cursor-pointer inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[var(--primary)] text-white shadow-lg hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30"
+              href="/shoppingList"
+            ></a>
           </div>
         </div>
 

@@ -23,9 +23,8 @@ async def fetch_page(session, url, semaphore):
         await asyncio.sleep(random.uniform(MIN_DELAY, MAX_DELAY))
 
         try:
-            async with session.get(url, headers=headers, timeout=aiohttp.ClientTimeout(total=15)) as response:
+            async with session.get(url, headers=headers, timeout=aiohttp.ClientTimeout(total=8)) as response:
                 text = await response.text()
-                print(f"Fetched {url} -> {response.status}", flush=True)
                 return text
         except Exception as e:
             print(f'Error fetching {url}: {e}')

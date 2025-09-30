@@ -355,7 +355,7 @@ function RecipeSuggestions({
       const img = recipe.img || recipe.image || recipe.imageUrl;
       const ingredients: string[] = (recipe.mainIngredients || recipe.ingredients || []).map((i: string) => i.toLowerCase());
       const missing = ingredients.filter((ing) => !available.includes(ing));
-      return { recipe, title, img, ingredients, missing };
+      return { recipe, title, img, ingredients, missing, id:recipe.id };
     })
     .filter((r) => {
       if (strictMode) return r.missing.length === 0;
@@ -378,7 +378,7 @@ function RecipeSuggestions({
             <div className="text-xs text-[var(--muted-fg)] mb-2">{r.ingredients.length} ingredients</div>
             <div className="text-xs text-[var(--muted-fg)] mb-2">{r.missing.length} missing</div>
             <div className="flex gap-2">
-              <button className="text-sm bg-blue-600 text-white px-3 py-1 rounded">View</button>
+              <button className="text-sm bg-blue-600 text-white px-3 py-1 rounded cursor-pointer" onClick={() => {window.location.href=`/recipe/${r.id}`}}>View</button>
               <button
                 className="text-sm border px-3 py-1 rounded text-[var(--muted-fg)]"
                 onClick={() => {

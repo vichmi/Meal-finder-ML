@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import Container from "../components/Container";
 import { useEffect, useState } from "react";
 import axios from "../libs/axios";
+import { useUser } from "../contexts/UserContext";
 
 interface RecipeData {
   source: string;
@@ -17,9 +18,6 @@ interface RecipeData {
 export default function Recipe() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState<RecipeData | null>(null);
-
-  const [rating, setRating] = useState<number>(0);
-  const [hoverRating, setHoverRating] = useState<number>(0);
   const [bookmarked, setBookmarked] = useState<boolean>(false);
 
   useEffect(() => {
@@ -28,18 +26,18 @@ export default function Recipe() {
     });
   }, [id]);
 
-  const handleBookmark = async () => {
-    try {
+  const handleBookmark = () => {
       if (bookmarked) {
-        // await axios.delete(`/recipe/${id}/bookmark`);
-        setBookmarked(false);
+        axios.delete(`/recipe/${id}/bookmark`, {withCredentials: true})
+        .then(res => {
+          setBookmarked(false);
+        });
       } else {
-        // await axios.post(`/recipe/${id}/bookmark`);
-        setBookmarked(true);
+        axios.post(`/recipe/${id}/bookmark`, {}, {withCredentials: true})
+        .then(res => {
+          setBookmarked(true);
+        })
       }
-    } catch (err) {
-      console.error("Error toggling bookmark:", err);
-    }
   };
 
   if (!recipe) {
@@ -65,42 +63,6 @@ export default function Recipe() {
 
           {/* Actions: Rating + Bookmark */}
           <div className="flex items-center gap-4">
-            {/* Stars */}
-            <div className="flex items-center">
-              {[1, 2, 3, 4, 5].map((star) => {
-                const isFilled = star <= (hoverRating || rating);
-                return (
-                  <button
-                    key={star}
-                    type="button"
-                    onClick={() => setRating(star)}
-                    onMouseEnter={() => setHoverRating(star)}
-                    onMouseLeave={() => setHoverRating(0)}
-                    className="focus:outline-none"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6"
-                      fill={isFilled ? "currentColor" : "none"}
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      style={{
-                        color: isFilled ? "#facc15" : "currentColor", // Tailwind yellow-400
-                        opacity: hoverRating && star <= hoverRating ? 0.5 : 1,
-                      }}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l2.09 6.41a1 1 0 00.95.69h6.708c.969 0 1.371 1.24.588 1.81l-5.428 3.947a1 1 0 00-.364 1.118l2.09 6.41c.3.921-.755 1.688-1.54 1.118l-5.428-3.947a1 1 0 00-1.175 0l-5.428 3.947c-.784.57-1.838-.197-1.539-1.118l2.09-6.41a1 1 0 00-.364-1.118L2.713 11.837c-.783-.57-.38-1.81.588-1.81h6.708a1 1 0 00.95-.69l2.09-6.41z"
-                      />
-                    </svg>
-                  </button>
-                );
-              })}
-            </div>
-
             {/* Bookmark */}
             <button
               onClick={handleBookmark}

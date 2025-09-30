@@ -5,10 +5,15 @@ import asyncio
 from src.scraping.scraper import get_results
 from src.database.normalize import recipe_hash
 import sys
+import json
 import re
 import io
 from src.database.normalize import push_to_database
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+def append_to_jsonl(new_data, filename="recipes.jsonl"):
+    with open(filename, "a", encoding="utf-8") as f:
+        f.write(json.dumps(new_data, ensure_ascii=False) + "\n")
 
 
 headers = {
@@ -181,5 +186,39 @@ async def get_matekitchen():
         }
         push_to_database(recipe, 'recipes_bg')
 
+async def get_24kitchen():
+    BASE_URLS = [f'https://www.24kitchen.bg/recipes?i={i}' for i in range(1, 432)]
+    base_results = await get_results(BASE_URLS)
+    links = []
+    for html in base_results:
+        soup = BeautifulSoup(html, 'html.parser')
+        links.extend([f'https://www.24kitchen.bg'+l['href'] for l in soup.select('.recipe-card__title-link')])
+    all_links_results = await get_results(links)
+    for idx, html in enumerate(all_links_results):
+        try:
+            soup = BeautifulSoup(html, 'html.parser')
+            title = soup.select_one('h2.page-header__title').get_text(strip=True)
+            ingredients = [{'name': ing.get_text(strip=True), 'amount': ''} for ing in soup.select('li.recipe-ingredients__item')]
+            instructions = [ing.get_text(strip=True) for ing in soup.select('li.recipe-steps__item')]
+            categories = [cat.get_text(strip=True) for cat in soup.select('li.subtags__item')]
+            source = '24kitchen'
+            append_to_jsonl({
+                'title': title,
+                'ingredients': ingredients,
+                'instructions': instructions,
+                'categories': categories,
+                'source': source
+            })
+            push_to_database({
+                'title': title,
+                'ingredients': ingredients,
+                'instructions': instructions,
+                'categories': categories,
+                'source': source
+            }, 'recipes_bg')
+        except Exception as e:
+            print(f'Error while fetching the {idx} page. {all_links_results[idx]}')
+
+
 if __name__ == '__main__':
-    asyncio.run(get_gotvatch())
+    asyncio.run(get_24kitchen())
