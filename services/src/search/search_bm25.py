@@ -6,7 +6,7 @@ from collections import Counter
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-recipes = db["recipes"]
+recipes = db["recipes_bg"]
 
 # Implementing BM25 algorithm
 def set_dictionary_queries():
@@ -15,6 +15,7 @@ def set_dictionary_queries():
     cursor = recipes.find({})
     for recipe in cursor:
         for word in recipe.get('title').split(' '):
+            if word in ['с', 'от', 'и', '-', 'за', 'на', 'или', 'се', 'в'] or len(word) <= 2: continue
             if word in queries.keys(): queries[word] += 1
             else: queries[word] = 1
         for ing in recipe.get('ingredients'):
@@ -29,7 +30,6 @@ def tokenize_document(d):
         w.lower().strip()
         for w in d.get("title", "").split()
         + [word for ing in d.get("ingredients", []) for word in ing.get("name", "").split()]
-        + (d.get("tags") or [])
     ]
 
 
@@ -39,7 +39,7 @@ def calculate_avgdl():
     cursor = recipes.find({})
     sum_length = 0
     for recipe in cursor:
-        sum_length += len(recipe.get("title", "").split() + [word for ing in recipe.get("ingredients", []) for word in ing.get("name", "").split()] + recipe.get("tags", []))
+        sum_length += len(recipe.get("title", "").split() + [word for ing in recipe.get("ingredients", []) for word in ing.get("name", "").split()])
     # count_documents = cursor.count()
     return sum_length / recipes.count_documents({})
 
@@ -80,14 +80,11 @@ def search(query: str, top_k: int) -> list[dict]:
         scores.append({
             "id": str(recipe["_id"]), 
             'ingredients': recipe['ingredients'],
-            'area': recipe['area'],
             'instructions': recipe['instructions'],
-            'tags': recipe['tags'],
             'title': recipe['title'],
             'categories': recipe['categories'],
-            'diets': recipe['diets'],
-            'score': float(score),
-            'img': str(recipe.get('img', "")or '')
+            'score': score,
+            'img': str(recipe.get('img', "") or (recipe.get('imgs', [''])[0] if recipe.get('imgs') else "" ))
         })
     results = sorted(scores, key=lambda x: x['score'], reverse=True)
     return results[:top_k]

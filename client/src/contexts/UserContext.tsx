@@ -27,7 +27,10 @@ export const UserProvider = ({children}: {children: React.ReactNode}) => {
             }
         })
         .catch(err => {
-            setUser(null);
+            if(err.response && err.response.status == 401) {
+                setUser(null);
+            }else{
+            }
         })
         .finally(() => {setLoading(false)});
     }, []);

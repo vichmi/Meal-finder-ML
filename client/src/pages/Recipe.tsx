@@ -3,6 +3,7 @@ import Container from "../components/Container";
 import { useEffect, useState } from "react";
 import axios from "../libs/axios";
 import { useUser } from "../contexts/UserContext";
+import TripleCheckbox from "../components/TripleCheckbox";
 
 interface RecipeData {
   source: string;
@@ -19,12 +20,22 @@ export default function Recipe() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState<RecipeData | null>(null);
   const [bookmarked, setBookmarked] = useState<boolean>(false);
-
+  const [fridge, setFridge] = useState<Array>([]);
+  const [shoppingList, setShoppingList] = useState<Array>([]);
+  
   useEffect(() => {
     axios.get(`/recipe/${id}`).then(res => {
       setRecipe(res.data);
     });
   }, [id]);
+console.log(recipe)
+  useEffect(() => {
+    axios.get('/userItems', {withCredentials: true})
+    .then(res => {
+      setFridge(res.data.fridge);
+      setShoppingList(res.data.shoppingList);
+    });
+  }, []);
 
   const handleBookmark = () => {
       if (bookmarked) {
@@ -53,7 +64,7 @@ export default function Recipe() {
       {/* Header */}
       <div className="space-y-4">
         <img
-          src={recipe.img}
+          src={recipe.img || `http://localhost:3001${recipe.imgs[0]}`}
           alt={recipe.title}
           className="w-full h-72 object-cover rounded-2xl shadow-md"
         />
@@ -86,10 +97,10 @@ export default function Recipe() {
 
         {/* Tags + Diets */}
         <div className="flex flex-wrap gap-2">
-          {recipe.tags.map((tag) => (
+          {recipe.categories.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full capitalize"
+              className="px-3 py-1 bg-[var(--bg)] text-gray-700 text-sm rounded-full capitalize"
             >
               {tag}
             </span>
@@ -107,9 +118,9 @@ export default function Recipe() {
 
       {/* Information */}
       {recipe.information && (
-        <div className="bg-white border rounded-xl shadow-sm p-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {recipe.information.map((info) => (
-            <div key={info.label} className="text-center">
+        <div className="bg-[var(--bg)] border rounded-xl shadow-sm p-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {recipe.information.map((info, index) => (
+            <div key={index} className="text-center">
               <p className="text-sm text-gray-500">{info.label}</p>
               <p className="font-semibold">{info.value}</p>
             </div>
@@ -120,18 +131,33 @@ export default function Recipe() {
       {/* Ingredients */}
       <div>
         <h2 className="text-2xl font-semibold mb-4">Ingredients</h2>
-        <ul className="space-y-2">
-          {recipe.ingredients.map((ing) => (
+        <ul className="space-y-2 bg-[var(--bg)]">
+          {recipe.ingredients.map((ing) => {
+            let state: 0|1|2 = 0;
+            if(fridge.includes(ing['name'])) {state = 1;}
+            if(shoppingList.includes(ing['name'])) {state = 2;}
+            return (
             <li
               key={ing._id}
-              className="flex items-center gap-2 bg-gray-50 rounded-lg p-2"
+              className="flex items-center gap-2 rounded-lg p-2 bg-[var(--card)]"
             >
-              <input type="checkbox" className="w-4 h-4 accent-green-600" />
+              <TripleCheckbox itemName={ing['name']} initialState={state} onUpdate={(newState) => {
+                if (newState === 1) {
+                  setFridge((f) => [...f, ing]);
+                  setShoppingList((s) => s.filter((i) => i !== ing));
+                } else if (newState === 2) {
+                  setShoppingList((s) => [...s, ing]);
+                  setFridge((f) => f.filter((i) => i !== ing));
+                } else {
+                  setFridge((f) => f.filter((i) => i !== ing));
+                  setShoppingList((s) => s.filter((i) => i !== ing));
+                }
+              }} />
               <span>
-                <span className="font-medium">{ing.amount}</span> {ing.name}
+                <span className="font-medium ">{ing.amount}</span> {ing.name}
               </span>
             </li>
-          ))}
+          )})}
         </ul>
       </div>
 

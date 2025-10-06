@@ -36,7 +36,11 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/search' element={<Search />} />
             <Route path='/recipe/:id' element={<Recipe />} />
-            <Route path='/fridge' element={<Fridge />} />
+            <Route path='/fridge' element={
+                <ProtectedRoute>  
+                  <Fridge />
+                </ProtectedRoute>
+            } />
             <Route
               path='/profile'
               element={

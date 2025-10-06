@@ -32,11 +32,12 @@ return (
 <div>
 <label htmlFor="username" className="block text-sm font-medium">Username</label>
 <input
-type="username"
-id="username"
-className="mt-1 w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-3 py-2 text-[var(--fg)] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]"
-placeholder="Username"
-/>
+  type="username"
+  id="username"
+  className="mt-1 w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] px-3 py-2 text-[var(--fg)] placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]"
+  placeholder="Username"
+  autoFocus
+  />
 </div>
 
 

@@ -1,0 +1,2744 @@
+[
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10043884",
+    "label": "Айвар",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1759096901301433,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "showBrand": false
+        },
+        "canonicalPath": "/p/ayvar/p10043884",
+        "canonicalUrl": "/p/ayvar/p10043884",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10043884_69b6e865",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10043884",
+        "flashSales": false,
+        "fullTitle": "Айвар",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "7200227"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/m2SXTfPJQgLCNQVJ4hAQN5MGnSK7R4Al92kl_VgdhuY/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RDU0OEI1NzY3QjY1RUI3M0Y3MUU1RjQ/4NDc4QjJBNjVBOUI2OTE0QURDNzE0RTkxMzdDRjNGRDQ2NDQ2MDBELmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/m2SXTfPJQgLCNQVJ4hAQN5MGnSK7R4Al92kl_VgdhuY/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RDU0OEI1NzY3QjY1RUI3M0Y3MUU1RjQ/4NDc4QjJBNjVBOUI2OTE0QURDNzE0RTkxMzdDRjNGRDQ2NDQ2MDBELmpwZw.jpg",
+          "accessibility": "Буркан с айвар Nostja с червени чушк."
+        },
+        "isUsedProduct": false,
+        "itemId": 10043884,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/m2SXTfPJQgLCNQVJ4hAQN5MGnSK7R4Al92kl_VgdhuY/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RDU0OEI1NzY3QjY1RUI3M0Y3MUU1RjQ/4NDc4QjJBNjVBOUI2OTE0QURDNzE0RTkxMzdDRjNGRDQ2NDQ2MDBELmpwZw.jpg",
+          "https://imgproxy-retcat.assets.schwarz/pJm0OiSE9TFTqkD2co_RbxRjff9NdhRMXK5Vi5d1Xv4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9ERkVDOTgyNEI0NzgwNEE0NUY0OUY2MDc/0NjA3QzQxOTc5RTVBOTM2NkRCNzcwRUIwMDQ2ODIzQjM4RkEzQTIxLmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/m2SXTfPJQgLCNQVJ4hAQN5MGnSK7R4Al92kl_VgdhuY/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RDU0OEI1NzY3QjY1RUI3M0Y3MUU1RjQ/4NDc4QjJBNjVBOUI2OTE0QURDNzE0RTkxMzdDRjNGRDQ2NDQ2MDBELmpwZw.jpg",
+            "accessibility": "Буркан с айвар Nostja с червени чушк."
+          },
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/pJm0OiSE9TFTqkD2co_RbxRjff9NdhRMXK5Vi5d1Xv4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9ERkVDOTgyNEI0NzgwNEE0NUY0OUY2MDc/0NjA3QzQxOTc5RTVBOTM2NkRCNzcwRUIwMDQ2ODIzQjM4RkEzQTIxLmpwZw.jpg",
+            "accessibility": "Буркан с лют айвар Nostja с червени чушки."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>Различни видове</li> </ul>",
+          "fullTitle": "Айвар",
+          "moreDetails": "Допълнителна информация",
+          "title": "Айвар",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Мазнини, масла, оцет и консерви",
+          "wonCategoryPrimaryPath": "0/17/1735"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "350 g/опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 4.49,
+          "priceSecond": 2.3,
+          "priceTheme": "white_red",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10043884,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1759096901,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 29.09. - 05.10.",
+                "type": "IN_STORE_TODAY_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": true,
+        "storeStartDate": 1759096800,
+        "title": "Айвар"
+      },
+      "productId": 10043884,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10076258",
+              "name": "Качествени млечни продукти",
+              "url": "/c/kachestveni-mlechni-produkti/a10076258",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079549",
+              "name": "Вкусна трапеза в балкански стил",
+              "url": "/c/vkusna-trapeza-v-balkanski-stil/a10079549",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Айвар",
+        "retailLists": [
+          [
+            {
+              "id": 6587,
+              "productSortIndex": 8
+            }
+          ]
+        ],
+        "lists": [
+          6587
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071681",
+              "name": "Консервирани храни",
+              "url": "/h/konservirani-khrani/h10071681",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1735",
+            "isMain": true,
+            "name": "Мазнини, масла, оцет и консерви",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10043884"
+    },
+    "tracking": {
+      "position": 181,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10043884",
+        "searchTrackingTitle": "%D0%90%D0%B9%D0%B2%D0%B0%D1%80",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10043884",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 181,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10043885",
+    "label": "Айвар",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1759096902167950,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "name": "Гурменица",
+          "url": "/q/search?q=%D0%B3%D1%83%D1%80%D0%BC%D0%B5%D0%BD%D0%B8%D1%86%D0%B0",
+          "showBrand": true
+        },
+        "canonicalPath": "/p/gurmenita-ayvar/p10043885",
+        "canonicalUrl": "/p/gurmenita-ayvar/p10043885",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10043885_ba9152a8",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10043885",
+        "flashSales": false,
+        "fullTitle": "Гурменица Айвар",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "7209254"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/NM3MwtAozIuAg5IE4emy2_QOBeoo9I15RGWrpUSfLQk/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RTQwQTgzMjMxRUE3RDlDMTM3MjQ2RUR/GRjE1MzRCODY4QUFGMTQxOERGQTgxMDU5MkUxMEYxNEZEMEJFMUExLmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/NM3MwtAozIuAg5IE4emy2_QOBeoo9I15RGWrpUSfLQk/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RTQwQTgzMjMxRUE3RDlDMTM3MjQ2RUR/GRjE1MzRCODY4QUFGMTQxOERGQTgxMDU5MkUxMEYxNEZEMEJFMUExLmpwZw.jpg",
+          "accessibility": "Буркан с айвар Гурменица с етикет във формата на вилица."
+        },
+        "isUsedProduct": false,
+        "itemId": 10043885,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/NM3MwtAozIuAg5IE4emy2_QOBeoo9I15RGWrpUSfLQk/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RTQwQTgzMjMxRUE3RDlDMTM3MjQ2RUR/GRjE1MzRCODY4QUFGMTQxOERGQTgxMDU5MkUxMEYxNEZEMEJFMUExLmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/NM3MwtAozIuAg5IE4emy2_QOBeoo9I15RGWrpUSfLQk/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85RTQwQTgzMjMxRUE3RDlDMTM3MjQ2RUR/GRjE1MzRCODY4QUFGMTQxOERGQTgxMDU5MkUxMEYxNEZEMEJFMUExLmpwZw.jpg",
+            "accessibility": "Буркан с айвар Гурменица с етикет във формата на вилица."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "fullTitle": "Гурменица Айвар",
+          "moreDetails": "Допълнителна информация",
+          "title": "Айвар",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Мазнини, масла, оцет и консерви",
+          "wonCategoryPrimaryPath": "0/17/1735"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "330 g/опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 7.99,
+          "priceSecond": 4.09,
+          "priceTheme": "white_red",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10043885,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1759096902,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 29.09. - 05.10.",
+                "type": "IN_STORE_TODAY_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": true,
+        "storeStartDate": 1759096800,
+        "title": "Айвар"
+      },
+      "productId": 10043885,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10076258",
+              "name": "Качествени млечни продукти",
+              "url": "/c/kachestveni-mlechni-produkti/a10076258",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079549",
+              "name": "Вкусна трапеза в балкански стил",
+              "url": "/c/vkusna-trapeza-v-balkanski-stil/a10079549",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Гурменица Айвар",
+        "retailLists": [
+          [
+            {
+              "id": 6587,
+              "productSortIndex": 9
+            }
+          ]
+        ],
+        "lists": [
+          6587
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071681",
+              "name": "Консервирани храни",
+              "url": "/h/konservirani-khrani/h10071681",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1735",
+            "isMain": true,
+            "name": "Мазнини, масла, оцет и консерви",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10043885"
+    },
+    "tracking": {
+      "position": 182,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10043885",
+        "searchTrackingTitle": "%D0%90%D0%B9%D0%B2%D0%B0%D1%80",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10043885",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 182,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10043887",
+    "label": "Македонска лютеница",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1759096901385351,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "name": "Гурменица",
+          "url": "/q/search?q=%D0%B3%D1%83%D1%80%D0%BC%D0%B5%D0%BD%D0%B8%D1%86%D0%B0",
+          "showBrand": true
+        },
+        "canonicalPath": "/p/gurmenita-makedonska-lytenita/p10043887",
+        "canonicalUrl": "/p/gurmenita-makedonska-lytenita/p10043887",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10043887_8ccb3e2b",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10043887",
+        "flashSales": false,
+        "fullTitle": "Гурменица Македонска лютеница",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "7209255"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/RqrVeWYwCUMzSnu1c7smeiYvpOCJIViKKt53qIbCbK0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yODhFNTBDOEVGRTdFN0U3NkUzMzExNDU/wOUQ5QUEzN0ExOEUxMUUyRDlBNDM4QjQ3OEIwMDIxMTQ0MzZCRTE3LmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/RqrVeWYwCUMzSnu1c7smeiYvpOCJIViKKt53qIbCbK0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yODhFNTBDOEVGRTdFN0U3NkUzMzExNDU/wOUQ5QUEzN0ExOEUxMUUyRDlBNDM4QjQ3OEIwMDIxMTQ0MzZCRTE3LmpwZw.jpg",
+          "accessibility": "Буркан с лютеница, 330 g/опаковка."
+        },
+        "isUsedProduct": false,
+        "itemId": 10043887,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/RqrVeWYwCUMzSnu1c7smeiYvpOCJIViKKt53qIbCbK0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yODhFNTBDOEVGRTdFN0U3NkUzMzExNDU/wOUQ5QUEzN0ExOEUxMUUyRDlBNDM4QjQ3OEIwMDIxMTQ0MzZCRTE3LmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/RqrVeWYwCUMzSnu1c7smeiYvpOCJIViKKt53qIbCbK0/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yODhFNTBDOEVGRTdFN0U3NkUzMzExNDU/wOUQ5QUEzN0ExOEUxMUUyRDlBNDM4QjQ3OEIwMDIxMTQ0MzZCRTE3LmpwZw.jpg",
+            "accessibility": "Буркан с лютеница, 330 g/опаковка."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "fullTitle": "Гурменица Македонска лютеница",
+          "moreDetails": "Допълнителна информация",
+          "title": "Македонска лютеница",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Мазнини, масла, оцет и консерви",
+          "wonCategoryPrimaryPath": "0/17/1735"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "330 g/опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 7.99,
+          "priceSecond": 4.09,
+          "priceTheme": "white_red",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10043887,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1759096901,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 29.09. - 05.10.",
+                "type": "IN_STORE_TODAY_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": true,
+        "storeStartDate": 1759096800,
+        "title": "Македонска лютеница"
+      },
+      "productId": 10043887,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10076258",
+              "name": "Качествени млечни продукти",
+              "url": "/c/kachestveni-mlechni-produkti/a10076258",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079549",
+              "name": "Вкусна трапеза в балкански стил",
+              "url": "/c/vkusna-trapeza-v-balkanski-stil/a10079549",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Гурменица Македонска лютеница",
+        "retailLists": [
+          [
+            {
+              "id": 6587,
+              "productSortIndex": 11
+            }
+          ]
+        ],
+        "lists": [
+          6587
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071681",
+              "name": "Консервирани храни",
+              "url": "/h/konservirani-khrani/h10071681",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1735",
+            "isMain": true,
+            "name": "Мазнини, масла, оцет и консерви",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10043887"
+    },
+    "tracking": {
+      "position": 183,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10043887",
+        "searchTrackingTitle": "%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D1%81%D0%BA%D0%B0+%D0%BB%D1%8E%D1%82%D0%B5%D0%BD%D0%B8%D1%86%D0%B0",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10043887",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 183,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044011",
+    "label": "Карначе",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795574210075,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "showBrand": false
+        },
+        "canonicalPath": "/p/karnace/p10044011",
+        "canonicalUrl": "/p/karnace/p10044011",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044011_fb7c0a92",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044011",
+        "flashSales": false,
+        "fullTitle": "Карначе",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "7206550"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/wcw5CqThpJgynqXf9GWQjUQ9kWYb6FLSLXK-1ibtq1w/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJDMEFERDRCMUM1RDYwQTAxQ0Y4OUFCRD/c4MkZGRjY3RkQzQUNGOTMwMThDQ0VCNDc3MDA1RDBCNEQyQTY5MjUucG5n.png",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/wcw5CqThpJgynqXf9GWQjUQ9kWYb6FLSLXK-1ibtq1w/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJDMEFERDRCMUM1RDYwQTAxQ0Y4OUFCRD/c4MkZGRjY3RkQzQUNGOTMwMThDQ0VCNDc3MDA1RDBCNEQyQTY5MjUucG5n.png",
+          "accessibility": "Карначе oт свинско месо поставено върху хартия за печене, декорирано с подправки на черна дъска."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044011,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/wcw5CqThpJgynqXf9GWQjUQ9kWYb6FLSLXK-1ibtq1w/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJDMEFERDRCMUM1RDYwQTAxQ0Y4OUFCRD/c4MkZGRjY3RkQzQUNGOTMwMThDQ0VCNDc3MDA1RDBCNEQyQTY5MjUucG5n.png"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/wcw5CqThpJgynqXf9GWQjUQ9kWYb6FLSLXK-1ibtq1w/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJDMEFERDRCMUM1RDYwQTAxQ0Y4OUFCRD/c4MkZGRjY3RkQzQUNGOTMwMThDQ0VCNDc3MDA1RDBCNEQyQTY5MjUucG5n.png",
+            "accessibility": "Карначе oт свинско месо поставено върху хартия за печене, декорирано с подправки на черна дъска."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>От свинско месо</li> <li>Опаковано в защитна атмосфера</li> </ul>",
+          "fullTitle": "Карначе",
+          "moreDetails": "Допълнителна информация",
+          "title": "Карначе",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Прясно месо",
+          "wonCategoryPrimaryPath": "0/17/1717"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "800 g/опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "discount": {
+            "discountHasStar": false,
+            "discountText": "-22%",
+            "fromRecommendedPrice": false,
+            "showDiscount": false,
+            "showFrom": false,
+            "showPercentage": false,
+            "showUpTo": false
+          },
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 8.39,
+          "priceSecond": 4.29,
+          "priceTheme": "white_yellow",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044011,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795574,
+        "seals": [
+          {
+            "altText": "Гаранция за качество от SGS, световен лидер в контрола.",
+            "image": "https://imgproxy-retcat.assets.schwarz/A5vYUfR8M-zcgm-jU82IJBaCXW61Pp9OIiMDDhZ90mA/sm:1/w:140/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMi9BMjFDQThCQkExQjFCRjE3NkJDNjA5MkE/3MEZGRkI1M0Q5RjY0NTczNEQ3NjhEQkY1NUYzMzcyQzkxQzkwRjRCLnBuZw.png"
+          }
+        ],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Карначе"
+      },
+      "productId": 10044011,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10076258",
+              "name": "Качествени млечни продукти",
+              "url": "/c/kachestveni-mlechni-produkti/a10076258",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Карначе",
+        "retailLists": [
+          [
+            {
+              "id": 6597,
+              "productSortIndex": 0
+            }
+          ]
+        ],
+        "lists": [
+          6597
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071016",
+              "name": "Прясно месо",
+              "url": "/h/pryasno-meso/h10071016",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1717",
+            "isMain": true,
+            "name": "Прясно месо",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044011"
+    },
+    "tracking": {
+      "position": 184,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044011",
+        "searchTrackingTitle": "%D0%9A%D0%B0%D1%80%D0%BD%D0%B0%D1%87%D0%B5",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044011",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 184,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044016",
+    "label": "Захар мултипак",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795554512438,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "name": "Diamant",
+          "url": "/q/search?q=diamant",
+          "showBrand": true
+        },
+        "canonicalPath": "/p/diamant-zakar-multipak/p10044016",
+        "canonicalUrl": "/p/diamant-zakar-multipak/p10044016",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044016_68ea12c2",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044016",
+        "flashSales": false,
+        "fullTitle": "Diamant Захар мултипак",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "185227"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/WyvFxbKMjM94aO7c7I4IiwwizvTa5vk3aarR4yv5Ry4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJBRDdBMEU3QjhEMUQyQzI3MzhEQjFDRD/k5NTg4NjVENjlCRTZGQ0Y0MUMxMTQxMDlEMDcxODYwMTEwRTlEQkIucG5n.png",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/WyvFxbKMjM94aO7c7I4IiwwizvTa5vk3aarR4yv5Ry4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJBRDdBMEU3QjhEMUQyQzI3MzhEQjFDRD/k5NTg4NjVENjlCRTZGQ0Y0MUMxMTQxMDlEMDcxODYwMTEwRTlEQkIucG5n.png",
+          "accessibility": "Десет пакета бяла кристална захар Diamant."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044016,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/WyvFxbKMjM94aO7c7I4IiwwizvTa5vk3aarR4yv5Ry4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJBRDdBMEU3QjhEMUQyQzI3MzhEQjFDRD/k5NTg4NjVENjlCRTZGQ0Y0MUMxMTQxMDlEMDcxODYwMTEwRTlEQkIucG5n.png"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/WyvFxbKMjM94aO7c7I4IiwwizvTa5vk3aarR4yv5Ry4/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJBRDdBMEU3QjhEMUQyQzI3MzhEQjFDRD/k5NTg4NjVENjlCRTZGQ0Y0MUMxMTQxMDlEMDcxODYwMTEwRTlEQkIucG5n.png",
+            "accessibility": "Десет пакета бяла кристална захар Diamant."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>Артикулът се продава като промопакет</li> <li>Закупуването на единични бройки не е позволено</li> <li>До 2 промопакета на клиент</li> </ul>",
+          "fullTitle": "Diamant Захар мултипак",
+          "moreDetails": "Допълнителна информация",
+          "title": "Захар мултипак",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Основни храни (яйца, макаронени изделия, брашно, бобови култури, олио и др.)",
+          "wonCategoryPrimaryPath": "0/17/1715"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "10 x 1 kg/опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "discount": {
+            "discountHasStar": false,
+            "discountText": "ТОП ЦЕНА",
+            "fromRecommendedPrice": false,
+            "showDiscount": false,
+            "showFrom": false,
+            "showPercentage": false,
+            "showUpTo": false
+          },
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 11.49,
+          "priceSecond": 5.87,
+          "priceTheme": "white_yellow",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044016,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795554,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Захар мултипак"
+      },
+      "productId": 10044016,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Diamant Захар мултипак",
+        "retailLists": [
+          [
+            {
+              "id": 6597,
+              "productSortIndex": 5
+            }
+          ]
+        ],
+        "lists": [
+          6597
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071045",
+              "name": "Основни храни",
+              "url": "/h/osnovni-khrani/h10071045",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1715",
+            "isMain": true,
+            "name": "Основни храни (яйца, макаронени изделия, брашно, бобови култури, олио и др.)",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044016"
+    },
+    "tracking": {
+      "position": 185,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044016",
+        "searchTrackingTitle": "%D0%97%D0%B0%D1%85%D0%B0%D1%80+%D0%BC%D1%83%D0%BB%D1%82%D0%B8%D0%BF%D0%B0%D0%BA",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044016",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 185,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044019",
+    "label": "Гауда",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795575269819,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "showBrand": false
+        },
+        "canonicalPath": "/p/gauda/p10044019",
+        "canonicalUrl": "/p/gauda/p10044019",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044019_e93dddf3",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044019",
+        "flashSales": false,
+        "fullTitle": "Гауда",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "1873"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/iZ5rfcW3-ejxxqoNPIeIyTruSkmaKgN8zornKLqQH9E/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yNDIzQUM5RTg0OTFFNUI2NDQ4RUZGRDU/xOUREMjM3MTgxNUMyQTI1NjUzNjI2MjMxQUMyREZEQ0VBOTExMTNELmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/iZ5rfcW3-ejxxqoNPIeIyTruSkmaKgN8zornKLqQH9E/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yNDIzQUM5RTg0OTFFNUI2NDQ4RUZGRDU/xOUREMjM3MTgxNUMyQTI1NjUzNjI2MjMxQUMyREZEQ0VBOTExMTNELmpwZw.jpg",
+          "accessibility": "Опаковка сирене Гауда от Pilos, 400 g/опаковка."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044019,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/iZ5rfcW3-ejxxqoNPIeIyTruSkmaKgN8zornKLqQH9E/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yNDIzQUM5RTg0OTFFNUI2NDQ4RUZGRDU/xOUREMjM3MTgxNUMyQTI1NjUzNjI2MjMxQUMyREZEQ0VBOTExMTNELmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/iZ5rfcW3-ejxxqoNPIeIyTruSkmaKgN8zornKLqQH9E/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yNDIzQUM5RTg0OTFFNUI2NDQ4RUZGRDU/xOUREMjM3MTgxNUMyQTI1NjUzNjI2MjMxQUMyREZEQ0VBOTExMTNELmpwZw.jpg",
+            "accessibility": "Опаковка сирене Гауда от Pilos, 400 g/опаковка."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "fullTitle": "Гауда",
+          "moreDetails": "Допълнителна информация",
+          "title": "Гауда",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Мляко & Млечни продукти",
+          "wonCategoryPrimaryPath": "0/17/1718"
+        },
+        "lidlPlus": [
+          {
+            "price": {
+              "basePrice": {
+                "prefix": false,
+                "text": "400 g/опаковка"
+              },
+              "discount": {
+                "deletedPrice": 7.49,
+                "deletedPriceSecond": 3.83,
+                "discountHasStar": false,
+                "discountText": "24% ПО-ЕВТИНО",
+                "fromRecommendedPrice": false,
+                "showDiscount": true,
+                "showFrom": false,
+                "showPercentage": true,
+                "showUpTo": false
+              },
+              "displayedCurrency": "ЛВ.",
+              "displayedCurrencySecond": "€",
+              "hasStar": true,
+              "hasVat": false,
+              "oldPrice": 7.49,
+              "oldPriceSecond": 3.83,
+              "price": 5.69,
+              "priceSecond": 2.91,
+              "priceTheme": "red_yellow",
+              "specialTaxes": []
+            },
+            "lidlPlusText": "С Lidl Plus",
+            "highlightText": "24% ПО-ЕВТИНО"
+          }
+        ],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044019,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795575,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Гауда"
+      },
+      "productId": 10044019,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10039565",
+              "name": "Lidl Plus промоции",
+              "url": "/c/lidl-plus-promotsii/a10039565",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10076258",
+              "name": "Качествени млечни продукти",
+              "url": "/c/kachestveni-mlechni-produkti/a10076258",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Гауда",
+        "retailLists": [
+          [
+            {
+              "id": 6583,
+              "productSortIndex": 17
+            }
+          ]
+        ],
+        "lists": [
+          6583
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071017",
+              "name": "Мляко & Млечни продукти",
+              "url": "/h/mlyako-mlechni-produkti/h10071017",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1718",
+            "isMain": true,
+            "name": "Мляко & Млечни продукти",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044019"
+    },
+    "tracking": {
+      "position": 186,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044019",
+        "searchTrackingTitle": "%D0%93%D0%B0%D1%83%D0%B4%D0%B0",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044019",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 186,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044020",
+    "label": "Заквасена сметана",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1759231129277606,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "showBrand": false
+        },
+        "canonicalPath": "/p/zakvasena-smetana/p10044020",
+        "canonicalUrl": "/p/zakvasena-smetana/p10044020",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044020_99884449",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044020",
+        "flashSales": false,
+        "fullTitle": "Заквасена сметана",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "2127"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/6QWMFV1qokn7V0uIORZsrPpP_uzbQpry2sON1hTFvkQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xNTU5Rjk5QTYzQjE2Qjk5QTdBQjAxNTQ/yQ0ZCOTM3Nzc4Q0NFMzhEQkZFNzlFNDE3RUE4N0RBQTNEQ0NGRTczLmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/6QWMFV1qokn7V0uIORZsrPpP_uzbQpry2sON1hTFvkQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xNTU5Rjk5QTYzQjE2Qjk5QTdBQjAxNTQ/yQ0ZCOTM3Nzc4Q0NFMzhEQkZFNzlFNDE3RUE4N0RBQTNEQ0NGRTczLmpwZw.jpg",
+          "accessibility": "Кофичка Pilos сметана 12% с тегло 400 г."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044020,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/6QWMFV1qokn7V0uIORZsrPpP_uzbQpry2sON1hTFvkQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xNTU5Rjk5QTYzQjE2Qjk5QTdBQjAxNTQ/yQ0ZCOTM3Nzc4Q0NFMzhEQkZFNzlFNDE3RUE4N0RBQTNEQ0NGRTczLmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/6QWMFV1qokn7V0uIORZsrPpP_uzbQpry2sON1hTFvkQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8xNTU5Rjk5QTYzQjE2Qjk5QTdBQjAxNTQ/yQ0ZCOTM3Nzc4Q0NFMzhEQkZFNzlFNDE3RUE4N0RBQTNEQ0NGRTczLmpwZw.jpg",
+            "accessibility": "Кофичка Pilos сметана 12% с тегло 400 г."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>12% масленост</li> </ul>",
+          "fullTitle": "Заквасена сметана",
+          "moreDetails": "Допълнителна информация",
+          "title": "Заквасена сметана",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Мляко & Млечни продукти",
+          "wonCategoryPrimaryPath": "0/17/1718"
+        },
+        "lidlPlus": [
+          {
+            "price": {
+              "basePrice": {
+                "prefix": false,
+                "text": "400 g/опаковка"
+              },
+              "discount": {
+                "deletedPrice": 2.99,
+                "deletedPriceSecond": 1.53,
+                "discountHasStar": false,
+                "discountText": "23% ПО-ЕВТИНО",
+                "fromRecommendedPrice": false,
+                "showDiscount": true,
+                "showFrom": false,
+                "showPercentage": true,
+                "showUpTo": false
+              },
+              "displayedCurrency": "ЛВ.",
+              "displayedCurrencySecond": "€",
+              "hasStar": true,
+              "hasVat": false,
+              "oldPrice": 2.99,
+              "oldPriceSecond": 1.53,
+              "price": 2.29,
+              "priceSecond": 1.17,
+              "priceTheme": "red_yellow",
+              "specialTaxes": []
+            },
+            "lidlPlusText": "С Lidl Plus",
+            "highlightText": "23% ПО-ЕВТИНО"
+          }
+        ],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044020,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1759231129,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Заквасена сметана"
+      },
+      "productId": 10044020,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10039565",
+              "name": "Lidl Plus промоции",
+              "url": "/c/lidl-plus-promotsii/a10039565",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10076258",
+              "name": "Качествени млечни продукти",
+              "url": "/c/kachestveni-mlechni-produkti/a10076258",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Заквасена сметана",
+        "retailLists": [
+          [
+            {
+              "id": 6583,
+              "productSortIndex": 18
+            }
+          ]
+        ],
+        "lists": [
+          6583
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071017",
+              "name": "Мляко & Млечни продукти",
+              "url": "/h/mlyako-mlechni-produkti/h10071017",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1718",
+            "isMain": true,
+            "name": "Мляко & Млечни продукти",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044020"
+    },
+    "tracking": {
+      "position": 187,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044020",
+        "searchTrackingTitle": "%D0%97%D0%B0%D0%BA%D0%B2%D0%B0%D1%81%D0%B5%D0%BD%D0%B0+%D1%81%D0%BC%D0%B5%D1%82%D0%B0%D0%BD%D0%B0",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044020",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 187,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044023",
+    "label": "Свинско в собствен сос XXL",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795554645035,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "showBrand": false
+        },
+        "canonicalPath": "/p/svinsko-v-sobstven-sos-xxl/p10044023",
+        "canonicalUrl": "/p/svinsko-v-sobstven-sos-xxl/p10044023",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044023_1af4aed9",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044023",
+        "flashSales": false,
+        "fullTitle": "Свинско в собствен сос XXL",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "5545171"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/MGtIbG9LzE8gI12Cu44sHFa92JhcU9hUEiBn-MGXPBs/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85NDE5RTgxNkVBMEZCQUNFOTc0MzUxREU/1N0RCQkNFQkRGRUFEMEUzMDBENDAzOTEzNTVDQ0E3MDhGNkE2OEFDLmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/MGtIbG9LzE8gI12Cu44sHFa92JhcU9hUEiBn-MGXPBs/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85NDE5RTgxNkVBMEZCQUNFOTc0MzUxREU/1N0RCQkNFQkRGRUFEMEUzMDBENDAzOTEzNTVDQ0E3MDhGNkE2OEFDLmpwZw.jpg",
+          "accessibility": "Консерва свинско месо Pikok в собствен сос, 400 гр."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044023,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/MGtIbG9LzE8gI12Cu44sHFa92JhcU9hUEiBn-MGXPBs/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85NDE5RTgxNkVBMEZCQUNFOTc0MzUxREU/1N0RCQkNFQkRGRUFEMEUzMDBENDAzOTEzNTVDQ0E3MDhGNkE2OEFDLmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/MGtIbG9LzE8gI12Cu44sHFa92JhcU9hUEiBn-MGXPBs/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS85NDE5RTgxNkVBMEZCQUNFOTc0MzUxREU/1N0RCQkNFQkRGRUFEMEUzMDBENDAzOTEzNTVDQ0E3MDhGNkE2OEFDLmpwZw.jpg",
+            "accessibility": "Консерва свинско месо Pikok в собствен сос, 400 гр."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>В асортимента и 300 g за 4.99 ЛВ./2.55 &euro;</li> </ul>",
+          "fullTitle": "Свинско в собствен сос XXL",
+          "moreDetails": "Допълнителна информация",
+          "title": "Свинско в собствен сос XXL",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Мазнини, масла, оцет и консерви",
+          "wonCategoryPrimaryPath": "0/17/1735"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "400 g/опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "discount": {
+            "discountHasStar": false,
+            "discountText": "33% БЕЗПЛАТНО",
+            "fromRecommendedPrice": false,
+            "showDiscount": false,
+            "showFrom": false,
+            "showPercentage": false,
+            "showUpTo": false
+          },
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 4.99,
+          "priceSecond": 2.55,
+          "priceTheme": "white_yellow",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044023,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795554,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Свинско в собствен сос XXL"
+      },
+      "productId": 10044023,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Свинско в собствен сос XXL",
+        "retailLists": [
+          [
+            {
+              "id": 6597,
+              "productSortIndex": 10
+            }
+          ]
+        ],
+        "lists": [
+          6597
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071681",
+              "name": "Консервирани храни",
+              "url": "/h/konservirani-khrani/h10071681",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1735",
+            "isMain": true,
+            "name": "Мазнини, масла, оцет и консерви",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044023"
+    },
+    "tracking": {
+      "position": 188,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044023",
+        "searchTrackingTitle": "%D0%A1%D0%B2%D0%B8%D0%BD%D1%81%D0%BA%D0%BE+%D0%B2+%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD+%D1%81%D0%BE%D1%81+XXL",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044023",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 188,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044027",
+    "label": "Бебешки шампоан за коса и тяло",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795548510017,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "name": "Бочко",
+          "url": "/q/search?q=%D0%B1%D0%BE%D1%87%D0%BA%D0%BE",
+          "showBrand": true
+        },
+        "canonicalPath": "/p/bocko-bebeski-sampoan-za-kosa-i-tylo/p10044027",
+        "canonicalUrl": "/p/bocko-bebeski-sampoan-za-kosa-i-tylo/p10044027",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044027_434a4dc2",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044027",
+        "flashSales": false,
+        "fullTitle": "Бочко Бебешки шампоан за коса и тяло",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "7201124"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/0Df83R1Id4kyk-xuFhqlYEojnHG5-LyOqKuT0aSx5cI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8wRDY2RkE1Rjg1NjFCRjZCRjlFMTYzRUR/ERjAyRjYxNUYzMkZBMzQ1OTZBRTBEQkI5RkZCMUQ2QjZEMDc3MjEyLmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/0Df83R1Id4kyk-xuFhqlYEojnHG5-LyOqKuT0aSx5cI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8wRDY2RkE1Rjg1NjFCRjZCRjlFMTYzRUR/ERjAyRjYxNUYzMkZBMzQ1OTZBRTBEQkI5RkZCMUQ2QjZEMDc3MjEyLmpwZw.jpg",
+          "accessibility": "Бочко шампоан за коса и тяло с лавандула, подходящ за бебета от 0+ месеца."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044027,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/0Df83R1Id4kyk-xuFhqlYEojnHG5-LyOqKuT0aSx5cI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8wRDY2RkE1Rjg1NjFCRjZCRjlFMTYzRUR/ERjAyRjYxNUYzMkZBMzQ1OTZBRTBEQkI5RkZCMUQ2QjZEMDc3MjEyLmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/0Df83R1Id4kyk-xuFhqlYEojnHG5-LyOqKuT0aSx5cI/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8wRDY2RkE1Rjg1NjFCRjZCRjlFMTYzRUR/ERjAyRjYxNUYzMkZBMzQ1OTZBRTBEQkI5RkZCMUQ2QjZEMDc3MjEyLmpwZw.jpg",
+            "accessibility": "Бочко шампоан за коса и тяло с лавандула, подходящ за бебета от 0+ месеца."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>0+</li> <li>Лавандула</li> </ul>",
+          "fullTitle": "Бочко Бебешки шампоан за коса и тяло",
+          "moreDetails": "Допълнителна информация",
+          "title": "Бебешки шампоан за коса и тяло",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Козметика и грижа за тялото",
+          "wonCategoryPrimaryPath": "0/17/1723"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "400 ml/опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "discount": {
+            "discountHasStar": false,
+            "discountText": "ТОП ЦЕНА",
+            "fromRecommendedPrice": false,
+            "showDiscount": false,
+            "showFrom": false,
+            "showPercentage": false,
+            "showUpTo": false
+          },
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 4.49,
+          "priceSecond": 2.3,
+          "priceTheme": "white_yellow",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044027,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795548,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Бебешки шампоан за коса и тяло"
+      },
+      "productId": 10044027,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079577",
+              "name": "Бебешки усмивки",
+              "url": "/c/bebeshki-usmivki/a10079577",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Бочко Бебешки шампоан за коса и тяло",
+        "retailLists": [
+          [
+            {
+              "id": 6597,
+              "productSortIndex": 10000
+            }
+          ]
+        ],
+        "lists": [
+          6597
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071019",
+              "name": "Козметика и грижа за тялото",
+              "url": "/h/kozmetika-i-grizha-za-tyaloto/h10071019",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1723",
+            "isMain": true,
+            "name": "Козметика и грижа за тялото",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044027"
+    },
+    "tracking": {
+      "position": 189,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044027",
+        "searchTrackingTitle": "%D0%91%D0%B5%D0%B1%D0%B5%D1%88%D0%BA%D0%B8+%D1%88%D0%B0%D0%BC%D0%BF%D0%BE%D0%B0%D0%BD+%D0%B7%D0%B0+%D0%BA%D0%BE%D1%81%D0%B0+%D0%B8+%D1%82%D1%8F%D0%BB%D0%BE",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044027",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 189,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044029",
+    "label": "Бебешки гащички",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795548974396,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "name": "Pufies",
+          "url": "/q/search?q=pufies",
+          "showBrand": true
+        },
+        "canonicalPath": "/p/pufies-bebeski-gasicki/p10044029",
+        "canonicalUrl": "/p/pufies-bebeski-gasicki/p10044029",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044029_49aec206",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044029",
+        "flashSales": false,
+        "fullTitle": "Pufies Бебешки гащички",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "7208744"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/Mm1eH-z8lYkWrAww6Wn589we5AYQoZpOwUWu5OFFKaU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNzJENEY3OTEyM0VENkZDREQwQzE4NjE/4RTNEQkY2ODZBQ0M5MzkzQzZCQkNDNDlFRDZBOUEzQkY0NDI5RTVGLmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/Mm1eH-z8lYkWrAww6Wn589we5AYQoZpOwUWu5OFFKaU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNzJENEY3OTEyM0VENkZDREQwQzE4NjE/4RTNEQkY2ODZBQ0M5MzkzQzZCQkNDNDlFRDZBOUEzQkY0NDI5RTVGLmpwZw.jpg",
+          "accessibility": "Бебешки гащички Pufies с размер 4 (9-15 kg) с 44 броя."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044029,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/Mm1eH-z8lYkWrAww6Wn589we5AYQoZpOwUWu5OFFKaU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNzJENEY3OTEyM0VENkZDREQwQzE4NjE/4RTNEQkY2ODZBQ0M5MzkzQzZCQkNDNDlFRDZBOUEzQkY0NDI5RTVGLmpwZw.jpg",
+          "https://imgproxy-retcat.assets.schwarz/Mqzr-sAhryZp1ypTL3-fDt9afs97_rYNwiYMilieDSQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yMTA4QzdCQTA0MDY2QzI1QTI2MTAyOTg/5ODREMzM4MzQ3NTlBQjRFQkRFRTVFOTVGNTE1RjYyRTkyMDlEQTQyLmpwZw.jpg",
+          "https://imgproxy-retcat.assets.schwarz/KL4gjCW58DxNQ0GXW45ZoL8LcOJ8GOMWdbDMVJ5pX6w/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS84MDNCOEFCMzM4Q0FDQzdCQzIyMzJGQ0Y/wN0U4NDFDMkJCQ0RFNzQwMjUyOUE0NDE1MDk0MjlBNzc1ODQ2MDY4LmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/Mm1eH-z8lYkWrAww6Wn589we5AYQoZpOwUWu5OFFKaU/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNzJENEY3OTEyM0VENkZDREQwQzE4NjE/4RTNEQkY2ODZBQ0M5MzkzQzZCQkNDNDlFRDZBOUEzQkY0NDI5RTVGLmpwZw.jpg",
+            "accessibility": "Бебешки гащички Pufies с размер 4 (9-15 kg) с 44 броя."
+          },
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/Mqzr-sAhryZp1ypTL3-fDt9afs97_rYNwiYMilieDSQ/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8yMTA4QzdCQTA0MDY2QzI1QTI2MTAyOTg/5ODREMzM4MzQ3NTlBQjRFQkRFRTVFOTVGNTE1RjYyRTkyMDlEQTQyLmpwZw.jpg",
+            "accessibility": "Бебешки гащички Pufies с размер 5 (12-17 kg) с 40 броя в опаковка, с дизайн, вдъхновен от природата."
+          },
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/KL4gjCW58DxNQ0GXW45ZoL8LcOJ8GOMWdbDMVJ5pX6w/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS84MDNCOEFCMzM4Q0FDQzdCQzIyMzJGQ0Y/wN0U4NDFDMkJCQ0RFNzQwMjUyOUE0NDE1MDk0MjlBNzc1ODQ2MDY4LmpwZw.jpg",
+            "accessibility": "Бебешки гащички Pufies с размер 6 (15+ kg) с 36 броя."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>Размер 4 (9 &ndash; 15 kg)<br>44 бр./опаковка</li> <li>Размер 5 (12 &ndash; 17 kg)<br>40 бр./опаковка</li> <li>Размер 6 (15+ kg)<br>36 бр./опаковка</li> </ul>",
+          "fullTitle": "Pufies Бебешки гащички",
+          "moreDetails": "Допълнителна информация",
+          "title": "Бебешки гащички",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Козметика и грижа за тялото",
+          "wonCategoryPrimaryPath": "0/17/1723"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "36,40 или 44 бр./опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "discount": {
+            "discountHasStar": false,
+            "discountText": "ТОП ЦЕНА",
+            "fromRecommendedPrice": false,
+            "showDiscount": false,
+            "showFrom": false,
+            "showPercentage": false,
+            "showUpTo": false
+          },
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 18.99,
+          "priceSecond": 9.71,
+          "priceTheme": "white_yellow",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044029,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795548,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Бебешки гащички"
+      },
+      "productId": 10044029,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079577",
+              "name": "Бебешки усмивки",
+              "url": "/c/bebeshki-usmivki/a10079577",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Pufies Бебешки гащички",
+        "retailLists": [
+          [
+            {
+              "id": 6597,
+              "productSortIndex": 10002
+            }
+          ]
+        ],
+        "lists": [
+          6597
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071019",
+              "name": "Козметика и грижа за тялото",
+              "url": "/h/kozmetika-i-grizha-za-tyaloto/h10071019",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1723",
+            "isMain": true,
+            "name": "Козметика и грижа за тялото",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044029"
+    },
+    "tracking": {
+      "position": 190,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044029",
+        "searchTrackingTitle": "%D0%91%D0%B5%D0%B1%D0%B5%D1%88%D0%BA%D0%B8+%D0%B3%D0%B0%D1%89%D0%B8%D1%87%D0%BA%D0%B8",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044029",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 190,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044035",
+    "label": "Бебешки гащички",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795554774368,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "showBrand": false
+        },
+        "canonicalPath": "/p/bebeski-gasicki/p10044035",
+        "canonicalUrl": "/p/bebeski-gasicki/p10044035",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044035_2cbba50b",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044035",
+        "flashSales": false,
+        "fullTitle": "Бебешки гащички",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "215133"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/4OyuXwAnsGsDMb9wNrJKixACMD6D2ocvHj256FY70qA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zMDMwQTdDNzc5RjgzQUM0MkE3MDQ3QkU/3MDY3ODc1OUM1Q0I3NkJFQ0UwOTI1RkIzM0FDNTFEMjBBMDQ5RDBGLmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/4OyuXwAnsGsDMb9wNrJKixACMD6D2ocvHj256FY70qA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zMDMwQTdDNzc5RjgzQUM0MkE3MDQ3QkU/3MDY3ODc1OUM1Q0I3NkJFQ0UwOTI1RkIzM0FDNTFEMjBBMDQ5RDBGLmpwZw.jpg",
+          "accessibility": "Опаковка пелени Lupilu, размер 5 (12-17 kg), с 80 броя."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044035,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/4OyuXwAnsGsDMb9wNrJKixACMD6D2ocvHj256FY70qA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zMDMwQTdDNzc5RjgzQUM0MkE3MDQ3QkU/3MDY3ODc1OUM1Q0I3NkJFQ0UwOTI1RkIzM0FDNTFEMjBBMDQ5RDBGLmpwZw.jpg",
+          "https://imgproxy-retcat.assets.schwarz/9H0hb_zFS85laO8RNCYX5aY_1yoBPp5hki_-cABi_bM/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9FQUQzNjZFMDczOTYyQzUyMDc4RTA2ODQ/xQjg4OEFFMDJCRTQ4MkU3REIxOEUxRjg0NUUxMjdBMTUxMkE1MkMwLmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/4OyuXwAnsGsDMb9wNrJKixACMD6D2ocvHj256FY70qA/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS8zMDMwQTdDNzc5RjgzQUM0MkE3MDQ3QkU/3MDY3ODc1OUM1Q0I3NkJFQ0UwOTI1RkIzM0FDNTFEMjBBMDQ5RDBGLmpwZw.jpg",
+            "accessibility": "Опаковка пелени Lupilu, размер 5 (12-17 kg), с 80 броя."
+          },
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/9H0hb_zFS85laO8RNCYX5aY_1yoBPp5hki_-cABi_bM/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9FQUQzNjZFMDczOTYyQzUyMDc4RTA2ODQ/xQjg4OEFFMDJCRTQ4MkU3REIxOEUxRjg0NUUxMjdBMTUxMkE1MkMwLmpwZw.jpg",
+            "accessibility": "Опаковка пелени Lupilu размер 6 (XL, 14-19 kg) със 72 броя."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "description": "<ul> <li>Размер 5 (12 &ndash; 17 kg)<br>80 бр./опаковка</li> <li>Размер 6 (14 &ndash; 19 kg)<br>72 бр./опаковка</li> <li>В асортимента и размер 5 (40 бр.) и размер 6 (36 бр.) за 19.99 ЛВ./10.22 &euro;</li> </ul>",
+          "fullTitle": "Бебешки гащички",
+          "moreDetails": "Допълнителна информация",
+          "title": "Бебешки гащички",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Козметика и грижа за тялото",
+          "wonCategoryPrimaryPath": "0/17/1723"
+        },
+        "lidlPlus": [],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "basePrice": {
+            "prefix": false,
+            "text": "72 или 80 бр./опаковка"
+          },
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "discount": {
+            "discountHasStar": false,
+            "discountText": "22% ПО-ЕВТИНО",
+            "fromRecommendedPrice": false,
+            "showDiscount": false,
+            "showFrom": false,
+            "showPercentage": false,
+            "showUpTo": false
+          },
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "oldPrice": 0.0,
+          "oldPriceSecond": 0.0,
+          "price": 30.99,
+          "priceSecond": 15.84,
+          "priceTheme": "white_yellow",
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044035,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795554,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 02.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759356000,
+        "title": "Бебешки гащички"
+      },
+      "productId": 10044035,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079577",
+              "name": "Бебешки усмивки",
+              "url": "/c/bebeshki-usmivki/a10079577",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Бебешки гащички",
+        "retailLists": [
+          [
+            {
+              "id": 6597,
+              "productSortIndex": 10008
+            }
+          ]
+        ],
+        "lists": [
+          6597
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071019",
+              "name": "Козметика и грижа за тялото",
+              "url": "/h/kozmetika-i-grizha-za-tyaloto/h10071019",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1723",
+            "isMain": true,
+            "name": "Козметика и грижа за тялото",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044035"
+    },
+    "tracking": {
+      "position": 191,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044035",
+        "searchTrackingTitle": "%D0%91%D0%B5%D0%B1%D0%B5%D1%88%D0%BA%D0%B8+%D0%B3%D0%B0%D1%89%D0%B8%D1%87%D0%BA%D0%B8",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044035",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 191,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  },
+  {
+    "resultClass": "product",
+    "type": "product",
+    "code": "10044039",
+    "label": "Хляб със семена",
+    "url": "",
+    "xPayload": {},
+    "gridbox": {
+      "country": "BG",
+      "sequence": 1758795548977805,
+      "data": {
+        "ageRestriction": false,
+        "awards": [],
+        "brand": {
+          "showBrand": false
+        },
+        "canonicalPath": "/p/klyb-s's-semena/p10044039",
+        "canonicalUrl": "/p/klyb-s's-semena/p10044039",
+        "category": "Хранителни",
+        "cutoutimage": {},
+        "dealOfDay": {
+          "active": false
+        },
+        "designTheme": "default",
+        "disclaimers": [
+          {
+            "id": "code_10044039_1894428f",
+            "type": "CODE",
+            "value": "Basic"
+          }
+        ],
+        "displayFreeDelivery": false,
+        "energyLabels": [],
+        "erpNumber": "10044039",
+        "flashSales": false,
+        "fullTitle": "Хляб със семена",
+        "gs1Attributes": [],
+        "havingPrice": true,
+        "havingThreesixty": false,
+        "havingVariablePrices": false,
+        "havingVideos": false,
+        "highlightedSeals": 0,
+        "ians": [
+          "2298"
+        ],
+        "image": "https://imgproxy-retcat.assets.schwarz/cpNhofwt80tkwf3R45cXSFvFHCwn9nXYPPUtqE4k00o/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNUExOUFBMTNENkIyQkU4MjYyNzAzMDE/3RDZGQTJCNUVDQTEwMEJDMjUwRDM3MEQ2ODM5NDRGNTUyOTVBNkNELmpwZw.jpg",
+        "image_V1": {
+          "image": "https://imgproxy-retcat.assets.schwarz/cpNhofwt80tkwf3R45cXSFvFHCwn9nXYPPUtqE4k00o/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNUExOUFBMTNENkIyQkU4MjYyNzAzMDE/3RDZGQTJCNUVDQTEwMEJDMjUwRDM3MEQ2ODM5NDRGNTUyOTVBNkNELmpwZw.jpg",
+          "accessibility": "Пълнозърнест хляб със семена и няколко нарязани филии върху хартия за печене."
+        },
+        "isUsedProduct": false,
+        "itemId": 10044039,
+        "imageList": [
+          "https://imgproxy-retcat.assets.schwarz/cpNhofwt80tkwf3R45cXSFvFHCwn9nXYPPUtqE4k00o/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNUExOUFBMTNENkIyQkU4MjYyNzAzMDE/3RDZGQTJCNUVDQTEwMEJDMjUwRDM3MEQ2ODM5NDRGNTUyOTVBNkNELmpwZw.jpg"
+        ],
+        "imageList_V1": [
+          {
+            "image": "https://imgproxy-retcat.assets.schwarz/cpNhofwt80tkwf3R45cXSFvFHCwn9nXYPPUtqE4k00o/sm:1/w:427/h:320/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvYmcvMS9DNUExOUFBMTNENkIyQkU4MjYyNzAzMDE/3RDZGQTJCNUVDQTEwMEJDMjUwRDM3MEQ2ODM5NDRGNTUyOTVBNkNELmpwZw.jpg",
+            "accessibility": "Пълнозърнест хляб със семена и няколко нарязани филии върху хартия за печене."
+          }
+        ],
+        "keyfacts": {
+          "analyticsCategory": "Хранителни",
+          "fullTitle": "Хляб със семена",
+          "moreDetails": "Допълнителна информация",
+          "title": "Хляб със семена",
+          "wonCategoryPrimary": "Светове на нуждата/Храна и близки до нея храни/Хляб и тестени изделия",
+          "wonCategoryPrimaryPath": "0/17/1713"
+        },
+        "lidlPlus": [
+          {
+            "price": {
+              "basePrice": {
+                "prefix": false,
+                "text": "700 g/бр."
+              },
+              "discount": {
+                "deletedPrice": 2.99,
+                "deletedPriceSecond": 1.53,
+                "discountHasStar": false,
+                "discountText": "50% ПО-ЕВТИНО",
+                "fromRecommendedPrice": false,
+                "showDiscount": true,
+                "showFrom": false,
+                "showPercentage": true,
+                "showUpTo": false
+              },
+              "displayedCurrency": "ЛВ.",
+              "displayedCurrencySecond": "€",
+              "hasStar": true,
+              "hasVat": false,
+              "oldPrice": 2.99,
+              "oldPriceSecond": 1.53,
+              "price": 1.49,
+              "priceSecond": 0.76,
+              "priceTheme": "red_yellow",
+              "specialTaxes": []
+            },
+            "lidlPlusText": "С Lidl Plus",
+            "highlightText": "50% ПО-ЕВТИНО"
+          }
+        ],
+        "multipack": false,
+        "online": false,
+        "preventSelling": false,
+        "price": {
+          "currencyCode": "BGN",
+          "currencyCodeSecond": "EUR",
+          "currencySymbol": "ЛВ.",
+          "currencySymbolSecond": "€",
+          "displayedCurrency": "ЛВ.",
+          "displayedCurrencySecond": "€",
+          "hasStar": true,
+          "hasVat": false,
+          "specialTaxes": [],
+          "variantsHaveDifferentPrices": false
+        },
+        "productId": 10044039,
+        "productType": "RETAIL",
+        "productOrigin": "progress_event",
+        "quickAddToCart": false,
+        "regions": [],
+        "ribbons": [],
+        "renderedTs": 1758795548,
+        "seals": [],
+        "stockAvailability": {
+          "availabilityIndicator": 0,
+          "badgeInfo": {
+            "badges": [
+              {
+                "text": "в магазините от 04.10. - 05.10.",
+                "type": "IN_STORE_FROM_FUTURE_DATE_RANGE"
+              }
+            ]
+          },
+          "onlineAvailable": false,
+          "orderableQuantities": [],
+          "minOrderableQuantity": 1
+        },
+        "store": false,
+        "storeStartDate": 1759528800,
+        "title": "Хляб със семена"
+      },
+      "productId": 10044039,
+      "meta": {
+        "categoryPaths": [],
+        "campaignPaths": [
+          [
+            {
+              "id": "10039565",
+              "name": "Lidl Plus промоции",
+              "url": "/c/lidl-plus-promotsii/a10039565",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10076258",
+              "name": "Качествени млечни продукти",
+              "url": "/c/kachestveni-mlechni-produkti/a10076258",
+              "hiddenCategory": false
+            }
+          ],
+          [
+            {
+              "id": "10079547",
+              "name": "Високо качество на ниска цена",
+              "url": "/c/visoko-kachestvo-na-niska-tsena/a10079547",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "fullTitle": "Хляб със семена",
+        "retailLists": [
+          [
+            {
+              "id": 6583,
+              "productSortIndex": 19
+            }
+          ]
+        ],
+        "lists": [
+          6583
+        ],
+        "wonCategoryBreadcrumbs": [
+          [
+            {
+              "id": "10068374",
+              "name": "Храни и напитки",
+              "url": "/c/khrani-i-napitki/s10068374",
+              "hiddenCategory": false
+            },
+            {
+              "id": "10071015",
+              "name": "Хляб и тестени изделия",
+              "url": "/h/khlyab-i-testeni-izdeliya/h10071015",
+              "hiddenCategory": false
+            }
+          ]
+        ],
+        "worldOfNeeds": [
+          {
+            "code": "1713",
+            "isMain": true,
+            "name": "Хляб и тестени изделия",
+            "parent": "17",
+            "superCategories": [
+              {
+                "code": "17",
+                "name": "Храна и близки до нея храни",
+                "parent": "0"
+              },
+              {
+                "code": "0",
+                "name": "Светове на нуждата",
+                "parent": ""
+              }
+            ]
+          }
+        ],
+        "preview": false
+      },
+      "action": "UPDATE",
+      "language": "bg",
+      "eventType": "GRIDBOX",
+      "id": "10044039"
+    },
+    "tracking": {
+      "position": 192,
+      "xPayload": {
+        "searchTrackingMasterId": "Product.10044039",
+        "searchTrackingTitle": "%D0%A5%D0%BB%D1%8F%D0%B1+%D1%81%D1%8A%D1%81+%D1%81%D0%B5%D0%BC%D0%B5%D0%BD%D0%B0",
+        "searchTrackingPageSize": 12,
+        "searchTrackingPage": 16,
+        "searchTrackingEvent": "click",
+        "list": "search",
+        "searchTrackingId": "Product.10044039",
+        "searchTrackingOrigPos": 1,
+        "searchTrackingPos": 192,
+        "searchTrackingOrigPageSize": 12,
+        "searchTrackingChannel": "BG",
+        "category": "Хранителни"
+      }
+    }
+  }
+]

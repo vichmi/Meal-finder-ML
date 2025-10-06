@@ -1,15 +1,19 @@
 const router = require('express').Router();
 const Recipe = require('../models/Recipe.js');
-const grpcClient = require('../grpc_client.js');
 
 const authRoutes = require('./auth.js');
 const recipeRoutes = require('./recipe.js')
+const userRoutes = require('./user.js');
 router.use('/auth/', authRoutes);
 router.use('/', recipeRoutes);
+router.use('/', userRoutes);
 
 router.get('/recommendations', async (req, res) => {
     try {
-        const randomRecipe = await Recipe.aggregate([{ $sample: { size: 1 } }]);
+        const randomRecipe = await Recipe.aggregate([
+                { $match: { img: { $exists: true, $ne: "" } } },
+                { $sample: { size: 1 } }
+            ]);
         if (randomRecipe.length === 0) {
             return res.status(404).json({ message: 'No recipes found' });
         }
@@ -23,13 +27,16 @@ router.get('/recommendations', async (req, res) => {
 router.get('/category', async (req, res) => {
     try {
         const categoryTitle = req.query.title;
-        grpcClient.Search({ query: categoryTitle, top_k: 5 }, async (err, response) => {
-            if (err) {
-                console.error('gRPC Error:', err);
-                return res.status(500).json({ message: 'gRPC error', error: err.message });
-            }
-            return res.json(response.results);
-        });
+        let recipes = [];
+        if(categoryTitle == 'Нови') {
+            recipes = await Recipe.find({img: {$exists: true, $ne: ""}}).sort({_id: -1}).limit(5);
+        }else if(categoryTitle == "Топ предложения") {
+            recipes = await Recipe.aggregate([
+                { $match: { img: { $exists: true, $ne: "" } } },
+                { $sample: { size: 5 } }
+            ]);
+        }
+        return res.status(200).send(recipes);
     }catch(err) {
         console.error('Error fetching categories:', err);
         res.status(500).json({ message: 'Server error', error: err.message });
@@ -40,12 +47,10 @@ router.get('/search', async (req, res) => {
     try {
         const searchQuery = req.query.q;
         const amountQuery = req.query.k || '5';
-        // console.log(Number(amountQuery));
         const recipes = await Recipe.find(
             {title: {$regex: '^' + searchQuery, $options: 'i'}},
             {title: 1, img: 1, ingredients: 1}
         ).limit(Number(amountQuery));
-        console.log(recipes.length)
         return res.json(recipes)
     } catch(err) {
         console.error('Error performing search:', err);
@@ -53,23 +58,5 @@ router.get('/search', async (req, res) => {
     }
 });
 
-router.post('/recipe', async (req, res) => {
-    try {
-        const ingredients = req.body.ingredients.join(' ');
-        if(ingredients.length === 0) {
-            return res.status(400).json({ message: 'No ingredients provided' });
-        }
-        grpcClient.Search({ query: ingredients, top_k: 5 }, async (err, response) => {
-            if (err) {
-                console.error('gRPC Error:', err);
-                return res.status(500).json({ message: 'gRPC error', error: err.message });
-            }
-            return res.json(response.results);
-        });
-    }catch(err) {
-        console.error('Error fetching recipe by ID:', err);
-        res.status(500).json({ message: 'Server error', error: err.message });
-    }
-});
 
 module.exports = router;

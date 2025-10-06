@@ -27,9 +27,10 @@ export default function Search() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {searchItems.map((item: any, index: number) => (
-              <div
+              <a
                 key={index}
                 className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
+                href={`/recipe/${item._id}`}
               >
                 <div className="w-full aspect-square bg-gray-100">
                   <img
@@ -56,7 +57,7 @@ export default function Search() {
                     </ul>
                   )}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         )}

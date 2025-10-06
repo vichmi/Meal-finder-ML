@@ -1,5 +1,6 @@
 import Container from "../components/Container";
 import { useState } from "react";
+import axios from '../libs/axios';
 
 export default function CreateRecipe() {
   const [title, setTitle] = useState("");
@@ -35,7 +36,29 @@ export default function CreateRecipe() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ title, categories, ingredients, instructions, servings, prepTime, cookTime, images });
+
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("categories", JSON.stringify(categories)); // arrays must be stringified
+    formData.append("ingredients", JSON.stringify(ingredients));
+    formData.append("instructions", instructions);
+    formData.append("servings", servings.toString());
+    formData.append("prepTime", prepTime.toString());
+    formData.append("cookTime", cookTime.toString());
+
+    // append images (images should be File[] from input type="file")
+    for (let i = 0; i < images.length; i++) {
+      formData.append("images", images[i]);
+    }
+
+    axios.post("/createRecipe", formData, {
+      withCredentials: true,
+      headers: { "Content-Type": "multipart/form-data" },
+    })
+    .then((res) => {
+      window.location.href = "/recipe/" + res.data._id;
+    })
+    .catch((err) => console.error(err));
   };
 
   return (
@@ -45,7 +68,7 @@ export default function CreateRecipe() {
           <h2 className="text-2xl font-bold text-[var(--brand)]">Create Recipe</h2>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
           {/* Title */}
           <div>
             <label className="block text-sm font-medium mb-1">Title</label>
@@ -172,14 +195,13 @@ export default function CreateRecipe() {
             />
           </div>
 
-          {/* Upload images */}
           <div>
             <label className="block text-sm font-medium mb-1">Upload Images</label>
             <input
               type="file"
               accept="image/*"
               multiple
-              onChange={(e) => setImages(e.target.files)}
+              onChange={(e) => setImages(Array.from(e.target.files || []))}
               className="block w-full text-sm text-[var(--fg)] file:mr-4 file:rounded-lg file:border-0 file:bg-[var(--primary)] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:opacity-90"
             />
           </div>

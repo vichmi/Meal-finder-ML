@@ -87,8 +87,10 @@ export default function SearchBar() {
                   onMouseDown={e => e.preventDefault()}
                   style={{ minHeight: 0 }}
                 >
-                  <img src={item.img} alt="" className="inline-block w-8 h-8 object-cover rounded mr-2 align-middle" />
-                  <span>{item.title || item.name || String(item)}</span>
+                  <a href={`/recipe/${item._id}`}>
+                    <img src={item.img} alt="" className="inline-block w-8 h-8 object-cover rounded mr-2 align-middle" />
+                    <span>{item.title || item.name || String(item)}</span>
+                  </a>
                 </li>
               ))}
             </ul>

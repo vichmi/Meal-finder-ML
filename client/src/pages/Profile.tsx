@@ -19,23 +19,23 @@ interface Recipe {
 
 export default function Profile() {
   const [diet, setDiet] = useState("");
-  const [image, setImage] = useState<string | null>(null);
+  const [image, setImage] = useState<string | null>(profileImage);
   const [recipes, setRecipes] = useState<Recipe[]>([]);
-
   useEffect(() => {
     axios
-      .get("/user/profile", { withCredentials: true })
+      .get("/auth/profile", { withCredentials: true })
       .then((res) => {
-        setDiet(res.data.diet || "");
-        setImage(res.data.img || null);
-        setRecipes(res.data.createdRecipes || []);
+        console.log(res.data);
+        setDiet(res.data.user.diet || "");
+        setImage(res.data.user.img || profileImage);
+        setRecipes(res.data.user.createdRecipes || []);
       })
       .catch((err) => console.error("Error loading profile:", err));
   }, []);
 
   const handleLogout = () => {
     axios
-      .post("/logout", {}, { withCredentials: true })
+      .post("/auth/logout", {}, { withCredentials: true })
       .then(() => {
         window.location.href = "/login";
       })
@@ -47,7 +47,6 @@ export default function Profile() {
     if (file) {
       const preview = URL.createObjectURL(file);
       setImage(preview);
-
       // TODO: качи към бекенда
       const formData = new FormData();
       formData.append("image", file);
@@ -56,6 +55,10 @@ export default function Profile() {
         .patch("/user/profile/image", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then(res=>{
+          console.log(res.data);
+          setImage(`http://localhost:3001/${res.data.image}`)
         })
         .catch((err) => console.error("Image upload error:", err));
     }
@@ -82,7 +85,7 @@ export default function Profile() {
       <div className="flex flex-col items-center mb-6">
         <div className="relative">
           <img
-            src={profileImage
+            src={image
             }
             alt="Profile"
             className="w-32 h-32 rounded-full border-4 border-[var(--border)] object-cover"

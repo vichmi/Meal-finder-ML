@@ -1,7 +1,28 @@
 const authMiddleware = require('../middlewares/userAuth');
 const User = require('../models/User');
 const router = require('express').Router();
-const Recipe = require('../models/Recipe')
+const Recipe = require('../models/Recipe');
+
+const grpcClient = require('../grpc_client.js');
+
+router.post('/recipe', async (req, res) => {
+    try {
+        const ingredients = req.body.ingredients.join(' ');
+        if(ingredients.length === 0) {
+            return res.status(400).json({ message: 'No ingredients provided' });
+        }
+        grpcClient.Search({ query: ingredients, top_k: 5 }, async (err, response) => {
+            if (err) {
+                console.error('gRPC Error:', err);
+                return res.status(500).json({ message: 'gRPC error', error: err.message });
+            }
+            return res.json(response.results);
+        });
+    }catch(err) {
+        console.error('Error fetching recipe by ID:', err);
+        res.status(500).json({ message: 'Server error', error: err.message });
+    }
+});
 
 router.get('/recipe/:id', async (req, res) => {
     try {
@@ -20,7 +41,6 @@ router.get('/recipe/:id', async (req, res) => {
 router.post('/recipe/:id/bookmark', authMiddleware, async (req, res) => {
     try {
         const user = req.user;
-        // console.log(user)
         if(!user) {
             return res.status(400).send({message: 'Invalid user'})
         }

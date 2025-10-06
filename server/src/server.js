@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const app = express();
 const connectDB = require('./db.js');
+const path = require('path');
 app.use(bodyParser.urlencoded())
 app.use(cors({
     origin: 'http://localhost:5173',
@@ -13,6 +14,8 @@ app.use(cors({
 }));
 app.use(cookieParser());
 app.use(express.json());
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 
 const routes = require('./routes/index.js');
 app.use('/api', routes);

@@ -32,13 +32,6 @@ export default function Hero({ recipe }: Props) {
                 <Tag key={t}>{t}</Tag>
               ))}
             </div>
-            <div className="mt-2 text-sm text-[var(--muted-fg)]">
-              <p>
-                Quick intro: crispy on the outside, fluffy inside. Ready in {recipe.prepTime}. Main ingredients:
-                {" "}
-                {/* <strong>{recipe.ingredients.slice(0, 3).map(i => i.name).join(", ")}</strong>. */}
-              </p>
-            </div>
             <div className="mt-2">
               <a href={`/recipe/${recipe._id}`} className="inline-flex items-center gap-2 rounded-xl bg-[var(--secondary)] px-4 py-2 font-medium text-[var(--primary-ink)] hover:opacity-90">
                 Cook this

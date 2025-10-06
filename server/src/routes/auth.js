@@ -48,8 +48,28 @@ router.post('/login', async(req, res) => {
     }
 });
 
-router.get('/profile', authMiddleware, (req, res) => {
-    res.json({ message: 'Profile data', user: req.user });
+router.post('/logout', async(req, res) => {
+    try {
+        res.clearCookie('token', {
+            httpOnly: true,
+        });
+        return res.status(200).json({message: 'Succesfulyy logged out'});
+    }catch(err) {
+        console.error(err);
+        return res.status(500).json({message: 'Server error', err: err.message});
+    }
+});
+
+router.get('/profile', authMiddleware, async(req, res) => {
+    const findUser = await User.findById(req.user.id);
+    if(!findUser) {
+        return res.status(404).send({message: 'User was not found'});
+    }
+    res.json({ message: 'Profile data', user: {
+        diet: findUser.diet,
+        img: findUser.profileImage ? process.env.SERVER_URL+findUser.profileImage : '',
+        createdRecipes: findUser.createdRecipes
+    } });
 }); 
 
 

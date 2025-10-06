@@ -12,7 +12,11 @@ const recipeSchema = new mongoose.Schema({
   area: String,
   tags: [String],
   categories: [String],
-  diets: [String]
-}, {collection: 'recipes'});
+  diets: [String],
+  source: String,
+  img: String,
+  imgs: [String],
+  author: String
+}, {collection: 'recipes_bg'});
 
 module.exports = mongoose.model("Recipe", recipeSchema);

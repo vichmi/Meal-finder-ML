@@ -1,108 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Container from "../components/Container";
-import { categories, heroRecipe } from "../data/recipe";
 import axios from '../libs/axios'
-
-const COMMON_PANTRY = [
-  // Basics / Seasonings
-  "Salt",
-  "Black Pepper",
-  "Olive Oil",
-  "Vegetable Oil",
-  "Butter",
-  "Vinegar",
-  "Soy Sauce",
-  "Sugar",
-  "Honey",
-  "Flour",
-  "Baking Powder",
-  "Baking Soda",
-  "Yeast",
-
-  // Spices & herbs
-  "Garlic",
-  "Onion",
-  "Paprika",
-  "Cumin",
-  "Coriander",
-  "Oregano",
-  "Basil",
-  "Thyme",
-  "Rosemary",
-  "Chili Flakes",
-  "Turmeric",
-
-  // Oils & condiments
-  "Mustard",
-  "Ketchup",
-  "Mayonnaise",
-  "Tomato Paste",
-  "Canned Tomatoes",
-  "Pesto",
-
-  // Staples
-  "Rice",
-  "Pasta",
-  "Oats",
-  "Bread",
-  "Canned Beans",
-  "Lentils",
-  "Chickpeas",
-  "Peanut Butter",
-  "Nuts",
-
-  // Dairy & eggs
-  "Milk",
-  "Eggs",
-  "Yogurt",
-  "Cheddar Cheese",
-  "Mozzarella",
-  "Cream",
-
-  // Vegetables (common)
-  "Carrot",
-  "Potato",
-  "Sweet Potato",
-  "Broccoli",
-  "Cauliflower",
-  "Bell Pepper",
-  "Tomato",
-  "Cucumber",
-  "Zucchini",
-  "Spinach",
-  "Kale",
-  "Lettuce",
-  "Mushrooms",
-
-  // Fruits (common)
-  "Apple",
-  "Banana",
-  "Orange",
-  "Lemon",
-  "Lime",
-  "Strawberry",
-  "Blueberry",
-  "Avocado",
-
-  // Meat & protein
-  "Chicken Breast",
-  "Ground Beef",
-  "Pork",
-  "Bacon",
-  "Sausage",
-  "Shrimp",
-  "Canned Tuna",
-  "Tofu",
-
-  // Misc
-  "Rice Vinegar",
-  "Sesame Oil",
-  "Coconut Milk",
-  "Stock (chicken/veg/beef)",
-];
-
-const FRIDGE_KEY = "mp:fridge";
-const SHOP_KEY = "mp:shopping";
+import COMMON_PANTRY from '../constants/commonPantry';
 
 export default function Fridge() {
   const [fridgeItems, setFridgeItems] = useState<string[]>([]);
@@ -121,30 +20,23 @@ export default function Fridge() {
 
   useEffect(() => {
     try {
-      const f = localStorage.getItem(FRIDGE_KEY);
-      const s = localStorage.getItem(SHOP_KEY);
-      if (f) setFridgeItems(JSON.parse(f));
-      if (s) setShoppingList(JSON.parse(s));
+      axios.get('/userItems', {withCredentials: true})
+      .then(res => {
+        if(res.data.fridge.length > 0) {
+          setFridgeItems(res.data.fridge);
+        }
+      })
+      .catch(err => {
+        console.error(err);
+      })
       setLoaded(true);
     } catch (e) {
     }
   }, []);
 
-  useEffect(() => {
-    if (!loaded) return;
-    localStorage.setItem(FRIDGE_KEY, JSON.stringify(fridgeItems));
-  }, [fridgeItems]);
-  useEffect(() => {
-    if (!loaded) return;
-    localStorage.setItem(SHOP_KEY, JSON.stringify(shoppingList));
-  }, [shoppingList]);
-
-
   const allKnown = Array.from(
     new Set([...COMMON_PANTRY, ...fridgeItems])
   );
-
-  // normalized available ingredients (lowercase, unique)
   const available = Array.from(new Set(fridgeItems)).map((s) => s.toLowerCase());
 
   const existsAnywhere = (name: string) =>
@@ -172,6 +64,12 @@ export default function Fridge() {
       setSuggestions([]);
       return;
     }
+    axios.post('/addFridgeItem', {item: newItem}, {withCredentials: true})
+      .then(res => {
+      })
+      .catch(err => {
+        alert('Item was not added');
+    })
   if (location === "fridge") {
     setFridgeItems([...fridgeItems, newItem]);
   }
@@ -179,22 +77,20 @@ export default function Fridge() {
     setSuggestions([]);
   };
 
-  const handleRemove = (name: string, loc: "fridge") => {
-    if (loc === "fridge") {
-        setFridgeItems(fridgeItems.filter((i) => i !== name));
-    }
+  const handleRemove = async (name: string) => {
+      const res = await axios.delete('/addFridgeItem', {data:{item: name}, withCredentials: true})
+      setFridgeItems(res.data);
   };
   useEffect(() => {
-    // If no available ingredients, clear suggestions instead of calling API
     if (available.length === 0) {
       setRecipes([]);
       return;
     }
-
-    // send proper JSON payload (axios will set Content-Type)
     axios
       .post('/recipe', { ingredients: available })
       .then((res: any) => {
+        console.log(res.data);
+
         setRecipes(res.data || []);
       })
       .catch((err: any) => {
@@ -274,7 +170,10 @@ export default function Fridge() {
               <button
                 className="text-sm text-[var(--muted-fg)]"
                 onClick={() => {
-                  setFridgeItems([]);
+                  axios.delete('/clearFridge', {withCredentials: true})
+                  .then(res => {
+                    setFridgeItems([]);
+                  })
                 }}
                 title="Clear fridge"
               >
@@ -294,7 +193,7 @@ export default function Fridge() {
                     <div className="flex items-center gap-2">
                       <button
                         className="text-red-500 px-2 py-1 rounded hover:bg-red-50"
-                        onClick={() => handleRemove(it, "fridge")}
+                        onClick={() => handleRemove(it)}
                       >
                         Remove
                       </button>

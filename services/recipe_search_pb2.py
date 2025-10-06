@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13recipe_search.proto\x12\x06recipe\"-\n\rSearchRequest\x12\r\n\x05query\x18\x01 \x01(\t\x12\r\n\x05top_k\x18\x02 \x01(\x05\"\xa9\x01\n\x06Recipe\x12\r\n\x05title\x18\x01 \x01(\t\x12\x14\n\x0cinstructions\x18\x02 \x01(\t\x12\x13\n\x0bingredients\x18\x03 \x03(\t\x12\x0c\n\x04tags\x18\x04 \x03(\t\x12\x12\n\ncategories\x18\x05 \x03(\t\x12\r\n\x05\x64iets\x18\x06 \x03(\t\x12\x0c\n\x04\x61rea\x18\x07 \x01(\t\x12\r\n\x05score\x18\x08 \x01(\x01\x12\x0b\n\x03img\x18\t \x01(\t\x12\n\n\x02id\x18\n \x01(\t\"1\n\x0eSearchResponse\x12\x1f\n\x07results\x18\x01 \x03(\x0b\x32\x0e.recipe.Recipe2G\n\x0cRecipeSearch\x12\x37\n\x06Search\x12\x15.recipe.SearchRequest\x1a\x16.recipe.SearchResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13recipe_search.proto\x12\x06recipe\"-\n\rSearchRequest\x12\r\n\x05query\x18\x01 \x01(\t\x12\r\n\x05top_k\x18\x02 \x01(\x05\"\x9a\x01\n\x06Recipe\x12\r\n\x05title\x18\x01 \x01(\t\x12\x14\n\x0cinstructions\x18\x02 \x01(\t\x12\x13\n\x0bingredients\x18\x03 \x03(\t\x12\x0c\n\x04tags\x18\x04 \x03(\t\x12\x12\n\ncategories\x18\x05 \x03(\t\x12\r\n\x05\x64iets\x18\x06 \x03(\t\x12\x0c\n\x04\x61rea\x18\x07 \x01(\t\x12\x0b\n\x03img\x18\x08 \x01(\t\x12\n\n\x02id\x18\t \x01(\t\"1\n\x0eSearchResponse\x12\x1f\n\x07results\x18\x01 \x03(\x0b\x32\x0e.recipe.Recipe2G\n\x0cRecipeSearch\x12\x37\n\x06Search\x12\x15.recipe.SearchRequest\x1a\x16.recipe.SearchResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -34,9 +34,9 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_SEARCHREQUEST']._serialized_start=31
   _globals['_SEARCHREQUEST']._serialized_end=76
   _globals['_RECIPE']._serialized_start=79
-  _globals['_RECIPE']._serialized_end=248
-  _globals['_SEARCHRESPONSE']._serialized_start=250
-  _globals['_SEARCHRESPONSE']._serialized_end=299
-  _globals['_RECIPESEARCH']._serialized_start=301
-  _globals['_RECIPESEARCH']._serialized_end=372
+  _globals['_RECIPE']._serialized_end=233
+  _globals['_SEARCHRESPONSE']._serialized_start=235
+  _globals['_SEARCHRESPONSE']._serialized_end=284
+  _globals['_RECIPESEARCH']._serialized_start=286
+  _globals['_RECIPESEARCH']._serialized_end=357
 # @@protoc_insertion_point(module_scope)

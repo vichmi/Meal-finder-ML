@@ -74,32 +74,6 @@ export default function Bookmarks() {
                   </p>
                 ))}
               </div>
-
-              {recipe.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-2">
-                  {recipe.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 bg-[var(--secondary)] text-[var(--primary)] rounded-full text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              {recipe.diets.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {recipe.diets.map((diet, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 bg-[var(--hover)] text-[var(--fg)] rounded-full text-xs"
-                    >
-                      {diet}
-                    </span>
-                  ))}
-                </div>
-              )}
             </div>
           </a>
         ))}

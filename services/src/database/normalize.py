@@ -3,7 +3,14 @@ import re
 import hashlib
 from pymongo import MongoClient, UpdateOne
 from src.database.db import *
-recipes = db["recipes"]
+from sentence_transformers import SentenceTransformer
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+from sklearn.cluster import KMeans
+import numpy as np
+
+recipes = db["recipes_bg"]
 
 def recipe_hash(title: str, ingredients: list[dict]) -> str:
     normalized_title = title.lower().strip() if title else ""
@@ -56,103 +63,16 @@ def parse_time_to_minutes(time_str: str) -> int | None:
         minutes += int(min_match.group(1))
     return minutes if minutes > 0 else None
 
-def normalize_and_update_all():
-    global recipes
-    cursor = recipes.find({})
-    print(cursor)
-    
-    result = recipes.update_many(
-        {},               # всички документи
-        {"$unset": {"category": ""}}
-    )
-    for recipe in cursor:
-        updates = {}
+def remove_duplicates(collection):
+    recipes = db[collection]
+    seen = set()
+    duplicate_removed = 0
 
-        updates["title"] = recipe.get("title", "").lower().strip()
-        
-        if recipe.get('area'):
-            updates['area'] = recipe['area'].lower().strip()
-        
-        updates["categories"] = [cat.lower().strip() for cat in recipe.get("categories") or []]
-        if recipe.get('category'):
-            updates["categories"].append(recipe['category'].lower().strip())
-            updates["categories"] = list(set(updates["categories"]))
-
-        updates["tags"] = [tag.lower().strip() for tag in recipe.get("tags") or []]
-
-        normalized_ingredients = []
-        for ing in recipe.get("ingredients", []):
-            amount = (ing.get("amount") or "").strip().lower()
-            name = (ing.get("name") or "").strip().lower()
-            normalized_ingredients.append({
-                "amount": amount,
-                "name": name
-            })
-        updates["ingredients"] = normalized_ingredients
-
-        instr = recipe.get("instructions", "")
-        if isinstance(instr, str):
-            steps = [s.strip().lower() for s in instr.splitlines() if s.strip()]
-        elif isinstance(instr, list):
-            steps = [s.strip().lower() for s in instr if isinstance(s, str) and s.strip()]
+    for doc in recipes.find().sort("_id", 1):
+        value = doc.get('recipe_hash')
+        if value in seen:
+            recipes.delete_one({"_id": doc["_id"]})
+            duplicate_removed += 1
         else:
-            steps = []
-        updates["instructions"] = steps
-
-        recipes.update_one(
-            {"_id": recipe["_id"]},
-            {"$set": updates}
-        )
-
-    print("✅ All recipes normalized and updated!")
-
-def add_diets():
-    diets_prohibited = None
-    with open('diets_prohibited.json', 'r', encoding='utf-8') as f:
-        diets_prohibited = json.load(f)
-
-    def check_diets(ingredients: list[str]) -> list[str]:
-        applicable_diets = []
-        global diets_prohibited
-        for diet, banned_list in diets_prohibited.items():
-            is_ok = True
-            for ing in ingredients:
-                ing = ing.lower().strip()
-                if any(banned in ing for banned in banned_list):
-                    is_ok = False
-                    break
-            if is_ok:
-                applicable_diets.append(diet)
-        return applicable_diets
-
-    def add_diets():
-        global recipes
-        bulk_ops = []
-        cursor = recipes.find({})
-        for recipe in cursor:
-            ingredients = [ing['name'] for ing in recipe.get('ingredients', [])]
-            diets = check_diets(ingredients)
-            bulk_ops.append(
-                UpdateOne(
-                    {"_id": recipe["_id"]},
-                    {"$set": {"diets":diets}}
-                )
-            )
-        if bulk_ops:
-            result = recipes.bulk_write(bulk_ops)
-
-
-def allrecipes_links_file():
-    pattern = re.compile(r"https?://[^/]+\.com/article(/|$)")
-    clean_links = []
-    with open('allrecipes_links.txt', "r", encoding='utf-8') as f:
-        for line in f:
-            url = line.strip()
-            if not url: continue
-            if not pattern.search(url):
-                clean_links.append(url)
-
-    with open('clean_links.txt', 'w', encoding='utf-8') as f:
-        for link in clean_links:
-            f.write(link+'\n')
-    print('done!')
+            seen.add(value)
+    print(f'Removed {duplicate_removed}')

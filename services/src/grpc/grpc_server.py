@@ -15,15 +15,10 @@ class RecipeSearchService(recipe_search_pb2_grpc.RecipeSearchServicer):
                 title=str(r['title']),
                 instructions=" ".join(r.get('instructions', [])) if isinstance(r.get('instructions'), list) else str(r.get('instructions', "")),
                 ingredients=[str(i['name']) for i in r.get('ingredients', [])],
-                tags=[str(t) for t in (r.get('tags') or [])],
                 categories=[str(c) for c in (r.get('categories') or [])],
-                diets=[str(d) for d in (r.get('diets') or [])],
-                area=str(r.get('area', "")),
-                score=float(r['score']),
                 img=str(r.get('img', "") or ''),
                 id=str(r.get('id', ""))
             ))
-        
         return recipe_search_pb2.SearchResponse(results=recipes)
 
 def serve():
