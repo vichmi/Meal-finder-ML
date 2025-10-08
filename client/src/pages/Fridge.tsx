@@ -252,7 +252,7 @@ function RecipeSuggestions({
     .map((recipe: any) => {
       const title = recipe.title || recipe.name || "Recipe";
       const img = recipe.img || recipe.image || recipe.imageUrl;
-      const ingredients: string[] = (recipe.mainIngredients || recipe.ingredients || []).map((i: string) => i.toLowerCase());
+      const ingredients: string[] = (recipe.ingredients || []).map((i: any) => i.name.toLowerCase());
       const missing = ingredients.filter((ing) => !available.includes(ing));
       return { recipe, title, img, ingredients, missing, id:recipe.id };
     })
