@@ -4,7 +4,9 @@ A full-stack web app that suggests recipes based on your ingredients and builds 
 
 ---
 
-## Live demo: https://personalized-recipe-and-shopping-as.vercel.app(https://personalized-recipe-and-shopping-as.vercel.app/)
+## 🔴 Live demo: [https://personalized-recipe-and-shopping-as.vercel.app](https://personalized-recipe-and-shopping-as.vercel.app/)
+
+---
 
 ## 🚀 Features
 
