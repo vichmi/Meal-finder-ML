@@ -8,10 +8,4 @@ const client = new recipeProto.RecipeSearch(
   "localhost:50051",
   grpc.credentials.createInsecure()
 );
-
-// client.Search({ query: "spaghetti bolonese", top_k: 5 }, (err, response) => {
-//     console.log(response)
-//   if (err) console.error(err);
-//   else console.log("Results:", response.results);
-// });
 module.exports = client;

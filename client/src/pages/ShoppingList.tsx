@@ -132,10 +132,8 @@ export default function ShoppingList() {
           ))}
         </ul>
       </div>
-
-      {/* Right side: Lidl matches */}
       <div>
-        <h2 className="text-xl font-semibold mb-4">Lidl Matches</h2>
+        <h2 className="text-xl font-semibold mb-4">Lidl PromotionsMatches</h2>
         <div className="grid grid-cols-2 gap-4">
           {lidlitems.map((product, index) => (
             <div

@@ -15,12 +15,8 @@ message Recipe {
   string title = 1;
   string instructions = 2;
   repeated string ingredients = 3;
-  repeated string tags = 4;
-  repeated string categories = 5;
-  repeated string diets = 6;
-  string area = 7;
-  string img = 8;
-  string id = 9;
+  string img = 4;
+  string id = 5;
 }
 
 message SearchResponse {

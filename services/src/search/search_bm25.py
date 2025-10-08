@@ -82,7 +82,6 @@ def search(query: str, top_k: int) -> list[dict]:
             'ingredients': recipe['ingredients'],
             'instructions': recipe['instructions'],
             'title': recipe['title'],
-            'categories': recipe['categories'],
             'score': score,
             'img': str(recipe.get('img', "") or (recipe.get('imgs', [''])[0] if recipe.get('imgs') else "" ))
         })

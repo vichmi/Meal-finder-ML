@@ -11,7 +11,7 @@ export default function CreateRecipe() {
   const [servings, setServings] = useState("");
   const [prepTime, setPrepTime] = useState("");
   const [cookTime, setCookTime] = useState("");
-  const [images, setImages] = useState<FileList | null>(null);
+  const [images, setImages] = useState<File[] | null>(null);
 
   const handleAddCategory = () => {
     if (categoryInput.trim() && !categories.includes(categoryInput.trim())) {
@@ -47,6 +47,7 @@ export default function CreateRecipe() {
     formData.append("cookTime", cookTime.toString());
 
     // append images (images should be File[] from input type="file")
+    if(!images) {return;}
     for (let i = 0; i < images.length; i++) {
       formData.append("images", images[i]);
     }

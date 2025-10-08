@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "../libs/axios";
+import { useUser } from "../contexts/UserContext";
 
 type Props = {
   itemName: string;
+  initialState: number;
+  onUpdate: (newState: 0 | 1 | 2) => void;
 };
 
 export default function TripleCheckbox({ itemName, initialState, onUpdate }: Props) {
-  const [state, setState] = useState<0 | 1 | 2>(initialState);
-
+  const [state, setState] = useState<0 | 1 | 2>(initialState as 0 | 1 | 2);
+  const {user} = useUser();
   const cycleState = async () => {
+    if(user == null) {return;}
     try {
       if(state == 0) {
         await axios.post('/addFridgeItem', {item: itemName}, {withCredentials: true});
@@ -24,8 +28,10 @@ export default function TripleCheckbox({ itemName, initialState, onUpdate }: Pro
         setState(0)
         onUpdate(0)
       }
-    }catch(err) {
-      console.error(err);
+    }catch(err: any) {
+      if(err.response && err.response.status == 401) {
+        return
+      }
     }
   }
 

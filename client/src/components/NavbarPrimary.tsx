@@ -122,7 +122,7 @@ export default function NavbarPrimary() {
           ) : (
             <a href="/profile">
               <img
-                src={user.user.img || profileImage}
+                src={user.img || profileImage}
                 alt="Profile"
                 className="cursor-pointer w-10 h-10 rounded-full object-cover border border-[var(--border)] shadow"
               />

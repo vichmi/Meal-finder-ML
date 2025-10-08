@@ -15,7 +15,6 @@ class RecipeSearchService(recipe_search_pb2_grpc.RecipeSearchServicer):
                 title=str(r['title']),
                 instructions=" ".join(r.get('instructions', [])) if isinstance(r.get('instructions'), list) else str(r.get('instructions', "")),
                 ingredients=[str(i['name']) for i in r.get('ingredients', [])],
-                categories=[str(c) for c in (r.get('categories') or [])],
                 img=str(r.get('img', "") or ''),
                 id=str(r.get('id', ""))
             ))

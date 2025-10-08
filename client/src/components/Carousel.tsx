@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import RecipeCard from "./RecipeCard";
 import axios from '../libs/axios';
-import type { Recipe } from "../types/recipes";
+import type { AxiosError, AxiosResponse } from "axios";
 
 function useCarousel() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -20,12 +20,12 @@ export default function Carousel({ title }: { title: string;}) {
   const [catRecipes, setCatRecipes] = useState([]);
   useEffect(() => {
     axios.get('/category?title=' + title)
-    .then(res => {
+    .then((res: AxiosResponse) => {
       if(res.status == 200) {
         setCatRecipes(res.data);
       }
     })
-    .catch(err => {console.error(err)});
+    .catch((err: AxiosError) => {console.error(err)});
   }, []);
 
   return (

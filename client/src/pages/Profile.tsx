@@ -24,13 +24,13 @@ export default function Profile() {
   useEffect(() => {
     axios
       .get("/auth/profile", { withCredentials: true })
-      .then((res) => {
+      .then((res:any) => {
         console.log(res.data);
         setDiet(res.data.user.diet || "");
         setImage(res.data.user.img || profileImage);
         setRecipes(res.data.user.createdRecipes || []);
       })
-      .catch((err) => console.error("Error loading profile:", err));
+      .catch((err:any) => console.error("Error loading profile:", err));
   }, []);
 
   const handleLogout = () => {
@@ -39,7 +39,7 @@ export default function Profile() {
       .then(() => {
         window.location.href = "/login";
       })
-      .catch((err) => console.error("Logout error:", err));
+      .catch((err:any) => console.error("Logout error:", err));
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,11 +56,11 @@ export default function Profile() {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
-        .then(res=>{
+        .then((res:any)=>{
           console.log(res.data);
           setImage(`http://localhost:3001/${res.data.image}`)
         })
-        .catch((err) => console.error("Image upload error:", err));
+        .catch((err:any) => console.error("Image upload error:", err));
     }
   };
 
@@ -74,7 +74,7 @@ export default function Profile() {
         { diet: newDiet },
         { withCredentials: true }
       )
-      .catch((err) => console.error("Diet update error:", err));
+      .catch((err:any) => console.error("Diet update error:", err));
   };
 
   return (
@@ -85,7 +85,7 @@ export default function Profile() {
       <div className="flex flex-col items-center mb-6">
         <div className="relative">
           <img
-            src={image
+            src={image || ''
             }
             alt="Profile"
             className="w-32 h-32 rounded-full border-4 border-[var(--border)] object-cover"

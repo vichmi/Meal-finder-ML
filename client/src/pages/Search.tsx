@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from '../libs/axios';
 import { useSearchParams } from 'react-router';
-import RecipeCard from '../components/RecipeCard';
 
 export default function Search() {
   const [searchItems, setSearchItems] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   useEffect(() => {
     const query = searchParams.get('q') || '';
     axios.get('/search?q=' + encodeURIComponent(query)+'&k='+encodeURIComponent('18'))
-    .then(res => {
+    .then((res: any) => {
       console.log(res.data)
       setSearchItems(res.data);
     })

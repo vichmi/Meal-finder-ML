@@ -9,7 +9,8 @@ interface RecipeData {
   source: string;
   title: string;
   img: string;
-  information: { label: string; value: string }[];
+  imgs: string[];
+  information: { label: string; value: string }[] | {prep_time: string, cook_time: string, difficulty: string};
   ingredients: { _id: string; amount: string; name: string }[];
   instructions: string[];
   tags: string[];
@@ -20,32 +21,37 @@ export default function Recipe() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState<RecipeData | null>(null);
   const [bookmarked, setBookmarked] = useState<boolean>(false);
-  const [fridge, setFridge] = useState<Array>([]);
-  const [shoppingList, setShoppingList] = useState<Array>([]);
-  
+  const [fridge, setFridge] = useState<string[]>([]);
+  const [shoppingList, setShoppingList] = useState<string[]>([]);
+  const {user} = useUser();
   useEffect(() => {
-    axios.get(`/recipe/${id}`).then(res => {
+    axios.get(`/recipe/${id}`).then((res: any) => {
       setRecipe(res.data);
     });
   }, [id]);
-console.log(recipe)
   useEffect(() => {
+    if(user == null) {return;}
     axios.get('/userItems', {withCredentials: true})
-    .then(res => {
+    .then((res: any) => {
       setFridge(res.data.fridge);
       setShoppingList(res.data.shoppingList);
-    });
+    })
+    .catch((err: any) => {
+      if(err.response && err.response.status == 401) {
+        return
+      }
+    })
   }, []);
 
   const handleBookmark = () => {
       if (bookmarked) {
         axios.delete(`/recipe/${id}/bookmark`, {withCredentials: true})
-        .then(res => {
+        .then(() => {
           setBookmarked(false);
         });
       } else {
         axios.post(`/recipe/${id}/bookmark`, {}, {withCredentials: true})
-        .then(res => {
+        .then(() => {
           setBookmarked(true);
         })
       }
@@ -64,7 +70,7 @@ console.log(recipe)
       {/* Header */}
       <div className="space-y-4">
         <img
-          src={recipe.img || `http://localhost:3001${recipe.imgs[0]}`}
+          src={recipe.img || recipe.imgs[0]}
           alt={recipe.title}
           className="w-full h-72 object-cover rounded-2xl shadow-md"
         />
@@ -96,7 +102,7 @@ console.log(recipe)
         </div>
 
         {/* Tags + Diets */}
-        <div className="flex flex-wrap gap-2">
+        {/* <div className="flex flex-wrap gap-2">
           {recipe.categories.map((tag) => (
             <span
               key={tag}
@@ -113,18 +119,24 @@ console.log(recipe)
               {diet}
             </span>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Information */}
       {recipe.information && (
         <div className="bg-[var(--bg)] border rounded-xl shadow-sm p-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {recipe.information.map((info, index) => (
+          {Array.isArray(recipe.information) ? recipe.information.map((info, index) => (
             <div key={index} className="text-center">
               <p className="text-sm text-gray-500">{info.label}</p>
               <p className="font-semibold">{info.value}</p>
             </div>
-          ))}
+          )) : 
+            <div className="text-center">
+              <p className="text-sm text-gray-500">{recipe.information?.difficulty}</p>
+              <p className="font-semibold">{recipe.information?.prep_time}</p>
+              <p className="font-semibold">{recipe.information?.cook_time}</p>
+            </div>
+          }
         </div>
       )}
 
@@ -134,8 +146,8 @@ console.log(recipe)
         <ul className="space-y-2 bg-[var(--bg)]">
           {recipe.ingredients.map((ing) => {
             let state: 0|1|2 = 0;
-            if(fridge.includes(ing['name'])) {state = 1;}
-            if(shoppingList.includes(ing['name'])) {state = 2;}
+            if(fridge?.includes(ing['name'])) {state = 1;}
+            if(shoppingList?.includes(ing['name'])) {state = 2;}
             return (
             <li
               key={ing._id}
@@ -143,14 +155,14 @@ console.log(recipe)
             >
               <TripleCheckbox itemName={ing['name']} initialState={state} onUpdate={(newState) => {
                 if (newState === 1) {
-                  setFridge((f) => [...f, ing]);
-                  setShoppingList((s) => s.filter((i) => i !== ing));
+                  setFridge((f) => [...f, ing['name']]);
+                  setShoppingList((s) => s.filter((i) => i !== ing['name']));
                 } else if (newState === 2) {
-                  setShoppingList((s) => [...s, ing]);
-                  setFridge((f) => f.filter((i) => i !== ing));
+                  setShoppingList((s) => [...s, ing['name']]);
+                  setFridge((f) => f.filter((i) => i !== ing['name']));
                 } else {
-                  setFridge((f) => f.filter((i) => i !== ing));
-                  setShoppingList((s) => s.filter((i) => i !== ing));
+                  setFridge((f) => f.filter((i) => i !== ing['name']));
+                  setShoppingList((s) => s.filter((i) => i !== ing['name']));
                 }
               }} />
               <span>

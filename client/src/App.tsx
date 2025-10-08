@@ -10,8 +10,7 @@ import NavbarPrimary from './components/NavbarPrimary'
 import Footer from './components/Footer'
 import Search from './pages/Search.tsx'
 import Profile from './pages/Profile.tsx'
-import { useContext } from 'react';
-import { UserContext, UserProvider } from './contexts/UserContext.tsx';
+import { UserProvider } from './contexts/UserContext.tsx';
 import { ProtectedRoute } from './pages/ProtectedRoute.tsx'
 import CreateRecipe from './pages/CreateRecipe.tsx'
 import CreateRecipeButton from './components/CreateRecipeButton.tsx'

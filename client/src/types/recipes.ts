@@ -1,10 +1,18 @@
+
+export type Ingredient = {
+    name: string;
+    amount: string;
+}
+
 export type Recipe = {
-    id: string;
+    id?: string;
     title: string;
-    img: string;
-    prepTime: string;
-    ingredients: string[];
+    img?: string;
+    ingredients: Ingredient[];
     tags?: string[];
+    information: string[];
+    _id: string;
+    imgs?: string[];
 };
 
 

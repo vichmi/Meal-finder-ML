@@ -4,14 +4,21 @@ import axios from '../libs/axios';
 interface User {
     id: string;
     username: string;
+    img: string;
+    bookmarkedRecipes: string[];
+    createdRecipes: string[];
+    fridge: string[];
+    shoppingList: string[];
+    profileImage: string;
 }
 
 interface UserContextType {
     user: User | null;
+    setUser: (user: User | null) => void;
     loading: boolean;
 }
 
-export const UserContext = createContext<UserContextType>({user: null, loading: true});
+export const UserContext = createContext<UserContextType>({user: null, loading: true, setUser: () => {}});
 
 export const useUser = () => useContext(UserContext);
 
@@ -21,15 +28,15 @@ export const UserProvider = ({children}: {children: React.ReactNode}) => {
 
     useEffect(() => {
         axios.get('/auth/profile', {withCredentials: true})
-        .then(res => {
+        .then((res:any) => {
             if(res.status == 200) {
                 setUser(res.data);
             }
         })
-        .catch(err => {
-            if(err.response && err.response.status == 401) {
+        .catch((err:any) => {
+            if(err.response && err.response.status === 401) {
                 setUser(null);
-            }else{
+                return
             }
         })
         .finally(() => {setLoading(false)});

@@ -1,8 +1,6 @@
 import Container from "./Container";
 import Tag from "./Tag";
 import type { Recipe } from '../types/recipes';
-import { useEffect, useState } from "react";
-import axios from '../libs/axios';
 
 type Props = {
   recipe: Recipe;

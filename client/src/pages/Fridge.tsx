@@ -11,7 +11,7 @@ export default function Fridge() {
   const [location, setLocation] = useState<"fridge">("fridge");
   const [recipes, setRecipes] = useState<any[]>([])
   const [strictMode, setStrictMode] = useState(false);
-  const [shoppingList, setShoppingList] = useState<string[]>([]);
+  const [_shoppingList, setShoppingList] = useState<string[]>([]);
 
   const addToShoppingList = (items: string[]) => {
     if (!items || items.length === 0) return;
@@ -21,12 +21,12 @@ export default function Fridge() {
   useEffect(() => {
     try {
       axios.get('/userItems', {withCredentials: true})
-      .then(res => {
+      .then((res: any) => {
         if(res.data.fridge.length > 0) {
           setFridgeItems(res.data.fridge);
         }
       })
-      .catch(err => {
+      .catch((err: any) => {
         console.error(err);
       })
       setLoaded(true);
@@ -65,9 +65,9 @@ export default function Fridge() {
       return;
     }
     axios.post('/addFridgeItem', {item: newItem}, {withCredentials: true})
-      .then(res => {
+      .then(() => {
       })
-      .catch(err => {
+      .catch(() => {
         alert('Item was not added');
     })
   if (location === "fridge") {
@@ -99,7 +99,7 @@ export default function Fridge() {
       });
   }, [fridgeItems]);
 
-  return (
+  return !loaded ? <span> Loading </span> : (
     <Container className="py-16">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">Fridge</h1>
@@ -171,7 +171,7 @@ export default function Fridge() {
                 className="text-sm text-[var(--muted-fg)]"
                 onClick={() => {
                   axios.delete('/clearFridge', {withCredentials: true})
-                  .then(res => {
+                  .then(() => {
                     setFridgeItems([]);
                   })
                 }}
@@ -218,12 +218,12 @@ export default function Fridge() {
               </div>
             </div>
 
-                    <RecipeSuggestions
-                      recipes={recipes}
-                      strictMode={strictMode}
-                      available={available}
-                      onAddMissing={(items: string[]) => addToShoppingList(items)}
-                    />
+              <RecipeSuggestions
+                recipes={recipes}
+                strictMode={strictMode}
+                available={available}
+                onAddMissing={(items: string[]) => addToShoppingList(items)}
+              />
             </div>
         </Container>
         </div>

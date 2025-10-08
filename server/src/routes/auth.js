@@ -65,11 +65,11 @@ router.get('/profile', authMiddleware, async(req, res) => {
     if(!findUser) {
         return res.status(404).send({message: 'User was not found'});
     }
-    res.json({ message: 'Profile data', user: {
+    res.json({ 
         diet: findUser.diet,
         img: findUser.profileImage ? process.env.SERVER_URL+findUser.profileImage : '',
         createdRecipes: findUser.createdRecipes
-    } });
+    });
 }); 
 
 
