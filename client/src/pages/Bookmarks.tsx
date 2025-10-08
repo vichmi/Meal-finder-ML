@@ -1,26 +1,18 @@
 import { useEffect, useState } from 'react';
 import axios from '../libs/axios';
-
-interface Recipe {
-  _id: string;
-  title: string;
-  img: string;
-  information: { label: string; value: string }[];
-  tags: string[];
-  diets: string[];
-}
+import type { Recipe } from '../types/recipes';
 
 export default function Bookmarks() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     axios
       .get('/bookmarked', { withCredentials: true })
-      .then((res) => {
+      .then((res: any) => {
         setRecipes(res.data);
       })
-      .catch((err) => {
+      .catch((err: any) => {
         console.error('Error fetching bookmarks:', err);
       })
       .finally(() => setLoading(false));
@@ -63,17 +55,6 @@ export default function Bookmarks() {
               <h2 className="text-lg font-semibold mb-2 line-clamp-2">
                 {recipe.title}
               </h2>
-
-              <div className="text-sm text-[var(--muted-fg)] mb-2">
-                {recipe.information?.map((info, i) => (
-                  <p key={i}>
-                    <span className="font-medium text-[var(--fg)]">
-                      {info.label}
-                    </span>{' '}
-                    {info.value}
-                  </p>
-                ))}
-              </div>
             </div>
           </a>
         ))}
