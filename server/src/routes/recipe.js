@@ -113,10 +113,7 @@ router.post("/recipe", async (req, res) => {
 router.get('/recipe/:id', async (req, res) => {
     try {
         const recipeId = req.params.id;
-        console.log(await Recipe.find({}));
         const recipe = await Recipe.findById(recipeId).select('-_id -embedding -source_id -recipe_hash')
-        console.log(recipeId)
-        console.log(recipe)
         if (!recipe) {
             return res.status(404).json({ message: 'Recipe not found' });
         }

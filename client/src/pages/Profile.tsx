@@ -18,7 +18,7 @@ interface Recipe {
 }
 
 export default function Profile() {
-  const [diet, setDiet] = useState("");
+  const [diet, setDiet] = useState<string>("");
   const [image, setImage] = useState<string | null>(profileImage);
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   useEffect(() => {
