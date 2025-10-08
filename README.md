@@ -31,6 +31,12 @@ A full-stack web app that suggests recipes based on your ingredients and builds 
 - JWT authentication with cookies
 - CORS setup for secure cross-domain cookies
 
+### Recipe Scraping
+- Python
+- BeautifulSoup4 + Requests
+- Data cleaning and structuring for database integration
+- CRON scheduler for lidl promotions
+
 ---
 
 ## ⚙️ Setup
