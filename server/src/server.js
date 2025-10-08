@@ -9,17 +9,16 @@ const connectDB = require('./db.js');
 const path = require('path');
 app.use(bodyParser.urlencoded())
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.CLIENT_URL,
     credentials: true
 }));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-
 const routes = require('./routes/index.js');
 app.use('/api', routes);
 
 connectDB().then(() => {
-    app.listen(process.env.PORT, () => {console.log(`Server started at: http://localhost:${process.env.PORT}`)});
+    app.listen(process.env.PORT, () => {console.log(`Server started`)});
 })
