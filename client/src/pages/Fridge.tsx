@@ -100,8 +100,8 @@ export default function Fridge() {
   }, [fridgeItems]);
 
   return !loaded ? <span> Loading </span> : (
-    <Container className="py-16">
-      <div className="max-w-5xl mx-auto">
+    <Container className="py-12">
+      <div className="max-w-5xl mx-auto px-2">
         <h1 className="text-3xl font-bold mb-2">Fridge</h1>
         <p className="text-sm text-[var(--muted-fg)] mb-6">
           Track what you have in your fridge. Add items below, move them between locations, and we'll use this list to suggest recipes.
@@ -157,10 +157,10 @@ export default function Fridge() {
           </div>
         </div>
 
-        <div className="flex flex-row">
+        <div className="flex flex-col lg:flex-row gap-6">
 
-        <div className="grid grid-cols-2 md:grid-cols-3">
-          <section className="bg-[var(--bg)] text-[var(--fg)] rounded shadow p-4 w-100">
+        <div className="w-full lg:w-1/3">
+          <section className="bg-[var(--bg)] text-[var(--fg)] rounded shadow p-4 w-full">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🧊</span>
@@ -205,8 +205,8 @@ export default function Fridge() {
           </section>
         </div>
         {/* Recipes container */}
-        <Container>
-          <div className="bg-[var(--bg)] text-[var(--fg)] rounded shadow p-4 w-140">
+        <div className="w-full lg:w-2/3">
+          <div className="bg-[var(--bg)] text-[var(--fg)] rounded shadow p-4 w-full">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold">Suggested Recipes</h2>
               <div className="flex items-center gap-4">
@@ -225,7 +225,7 @@ export default function Fridge() {
                 onAddMissing={(items: string[]) => addToShoppingList(items)}
               />
             </div>
-        </Container>
+        </div>
         </div>
       </div>
     </Container>

@@ -9,7 +9,7 @@ export default function NavbarSecondary() {
           {categories.map((c) => (
             <button
               key={c}
-              className="shrink-0 rounded-full border border-[var(--brand)] bg-[var(--card)] px-4 py-1.5 text-sm text-[var(--fg)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+              className="shrink-0 rounded-full border border-[var(--brand)] bg-[var(--card)] px-3 py-1.5 text-sm text-[var(--fg)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
             >
               {c}
             </button>

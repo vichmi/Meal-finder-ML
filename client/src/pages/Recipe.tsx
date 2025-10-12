@@ -66,16 +66,16 @@ export default function Recipe() {
   }
 
   return (
-    <Container className="py-12 space-y-10 max-w-4xl">
+    <Container className="py-8 space-y-10 px-2">
       {/* Header */}
       <div className="space-y-4">
         <img
           src={recipe.img || recipe.imgs[0]}
           alt={recipe.title}
-          className="w-full h-72 object-cover rounded-2xl shadow-md"
+          className="w-full h-56 sm:h-72 object-cover rounded-2xl shadow-md"
         />
 
-        <div className="flex items-start justify-between">
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
           <h1 className="text-4xl font-bold capitalize">{recipe.title}</h1>
 
           {/* Actions: Rating + Bookmark */}
@@ -124,7 +124,7 @@ export default function Recipe() {
 
       {/* Information */}
       {recipe.information && (
-        <div className="bg-[var(--bg)] border rounded-xl shadow-sm p-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="bg-[var(--bg)] border rounded-xl shadow-sm p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {Array.isArray(recipe.information) ? recipe.information.map((info, index) => (
             <div key={index} className="text-center">
               <p className="text-sm text-gray-500">{info.label}</p>

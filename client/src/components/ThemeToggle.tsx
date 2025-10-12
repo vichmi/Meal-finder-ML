@@ -22,9 +22,10 @@ export default function ThemeToggle() {
     return (
         <button
             onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
-            className="cursor-pointer inline-flex items-center gap-2 rounded-2xl border px-3 py-1.5 text-sm transition hover:opacity-90 border-[var(--border)] bg-[var(--card)] text-[var(--fg)]"
+            className="cursor-pointer inline-flex items-center gap-2 rounded-2xl border px-2 py-1 text-sm transition hover:opacity-90 border-[var(--border)] bg-[var(--card)] text-[var(--fg)]"
+            aria-label="Toggle theme"
             >
-            {theme === "dark" ? "Dark" : "Light"} mode
+            {theme === "dark" ? "Dark" : "Light"}
         </button>
     );
 

@@ -10,13 +10,13 @@ export default function Hero({ recipe }: Props) {
     return (
     <section className="py-8 sm:py-10">
       <Container>
-        <div className="grid items-stretch gap-6 md:grid-cols-2">
+        <div className="grid items-stretch gap-6 grid-cols-1 md:grid-cols-2">
           {/* Image */}
           <div className="relative overflow-hidden rounded-2xl">
             <img
               src={recipe.img}
               alt={recipe.title}
-              className="aspect-video w-full object-cover"
+              className="w-full h-56 sm:h-72 md:h-auto object-cover"
               loading="eager"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent" aria-hidden />

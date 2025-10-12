@@ -63,8 +63,8 @@ export default function CreateRecipe() {
   };
 
   return (
-    <div className="min-h-screen flex items-start justify-center bg-[var(--bg)] text-[var(--fg)] py-10">
-      <Container className="max-w-3xl w-full border border-[var(--border)] rounded-2xl bg-[var(--card)] p-8 shadow-md">
+    <div className="min-h-screen flex items-start justify-center bg-[var(--bg)] text-[var(--fg)] py-8 px-2">
+      <Container className="max-w-3xl w-full border border-[var(--border)] rounded-2xl bg-[var(--card)] p-6 sm:p-8 shadow-md">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-[var(--brand)]">Create Recipe</h2>
         </div>

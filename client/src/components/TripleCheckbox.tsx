@@ -38,7 +38,8 @@ export default function TripleCheckbox({ itemName, initialState, onUpdate }: Pro
   return (
     <button
       onClick={cycleState}
-      className="flex items-center justify-center h-10 w-10 rounded-lg bg-gray-200 hover:bg-gray-300 transition cursor-pointer"
+      className="flex items-center justify-center h-8 w-8 sm:h-10 sm:w-10 rounded-lg bg-gray-200 hover:bg-gray-300 transition cursor-pointer"
+      aria-label={`Set ${itemName} state`}
     >
       {state === 0 && (
         <span className="text-gray-400">•</span> // празно
@@ -46,16 +47,16 @@ export default function TripleCheckbox({ itemName, initialState, onUpdate }: Pro
 
       {state === 1 && (
         // fridge icon
-        <svg
+  <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="48"
-                height="48"
+    width="20"
+    height="20"
                 fill="none"
                 stroke="blue"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+    strokeWidth={1}
+    strokeLinecap="round"
+    strokeLinejoin="round"
                 role="img"
                 aria-label="Fridge icon"
               >
@@ -70,15 +71,15 @@ export default function TripleCheckbox({ itemName, initialState, onUpdate }: Pro
 
       {state === 2 && (
         // shopping list icon
-        <svg
+  <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="green"
-                strokeWidth={1.8}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
+    stroke="green"
+    strokeWidth={1.6}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-5 w-5"
                 aria-hidden="true"
               >
                 <path d="M3 5h2l1 12h12l1.5-8H6" />

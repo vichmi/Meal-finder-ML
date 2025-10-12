@@ -9,7 +9,7 @@ export default function RecipeCard({ r }: { r: Recipe }) {
   return (
     <a
       href={`/recipe/${r._id}`}
-      className="group relative w-64 shrink-0 snap-center overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--card)] shadow-sm"
+      className="group relative w-full sm:w-64 shrink-0 snap-center overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--card)] shadow-sm"
     >
       <div className="relative">
         <img src={r.img} alt={r.title} className="aspect-[4/5] w-full object-cover" loading="lazy" />

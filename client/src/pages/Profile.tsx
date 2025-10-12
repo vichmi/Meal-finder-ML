@@ -26,9 +26,9 @@ export default function Profile() {
       .get("/auth/profile", { withCredentials: true })
       .then((res:any) => {
         console.log(res.data);
-        setDiet(res.data.user.diet || "");
-        setImage(res.data.user.img || profileImage);
-        setRecipes(res.data.user.createdRecipes || []);
+        setDiet(res.data.diet || "");
+        setImage(res.data.img || profileImage);
+        setRecipes(res.data.createdRecipes || []);
       })
       .catch((err:any) => console.error("Error loading profile:", err));
   }, []);
@@ -78,7 +78,7 @@ export default function Profile() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-[var(--bg)] text-[var(--fg)] min-h-screen">
+  <div className="max-w-5xl mx-auto p-4 sm:p-6 bg-[var(--bg)] text-[var(--fg)] min-h-screen">
       <h1 className="text-2xl font-bold mb-6">Моят профил</h1>
 
       {/* Profile image */}
@@ -88,7 +88,7 @@ export default function Profile() {
             src={image || ''
             }
             alt="Profile"
-            className="w-32 h-32 rounded-full border-4 border-[var(--border)] object-cover"
+            className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-[var(--border)] object-cover"
           />
           <label
             htmlFor="profileImage"
@@ -143,7 +143,7 @@ export default function Profile() {
                   alt={recipe.title}
                   className="w-full h-40 object-cover"
                 />
-                <div className="p-3">
+                <div className="mb-6">
                   <h3 className="font-medium line-clamp-2">{recipe.title}</h3>
                   <a
                     href={`/recipe/${recipe._id}`}
@@ -151,7 +151,7 @@ export default function Profile() {
                   >
                     Виж рецептата
                   </a>
-                </div>
+                  </div>
               </div>
             ))}
           </div>

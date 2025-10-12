@@ -84,7 +84,7 @@ export default function ShoppingList() {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-6 p-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6">
       {/* Left side: Shopping list + input */}
       <div>
         <h2 className="text-xl font-semibold mb-4">Your Shopping List</h2>
@@ -134,7 +134,7 @@ export default function ShoppingList() {
       </div>
       <div>
         <h2 className="text-xl font-semibold mb-4">Lidl PromotionsMatches</h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
           {lidlitems.map((product, index) => (
             <div
               key={index}

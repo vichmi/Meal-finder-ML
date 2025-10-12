@@ -41,8 +41,8 @@ export default function SearchBar() {
   };
 
   return (
-    <form className="relative w-full max-w-xl" role="search" aria-label="Search recipes" autoComplete="off" onSubmit={handleSubmit}>
-      <input
+  <form className="relative w-full max-w-xl mx-auto" role="search" aria-label="Search recipes" autoComplete="off" onSubmit={handleSubmit}>
+        <input
         ref={inputRef}
         type="search"
         value={query}
@@ -73,7 +73,8 @@ export default function SearchBar() {
       {focused && query.length > 0 && (
         <div
           id="search-results-list"
-          className="absolute left-0 right-0 mt-2 rounded-2xl border border-[var(--border)] bg-[var(--card)] shadow-lg z-20 overflow-hidden"
+          className="absolute left-0 right-0 mt-2 rounded-2xl border border-[var(--border)] bg-[var(--card)] shadow-lg z-20 overflow-hidden max-h-72 sm:max-h-56"
+          style={{ width: '100%' }}
         >
           {searchItems.length === 0 ? (
             <div className="px-4 py-3 text-center text-sm text-[var(--muted-fg)]">No recipes found</div>

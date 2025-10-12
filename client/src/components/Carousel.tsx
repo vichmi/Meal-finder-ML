@@ -9,7 +9,8 @@ function useCarousel() {
   const scrollBy = (dir: 1 | -1) => {
     const node = ref.current;
     if (!node) return;
-    const cardWidth = 272; // ~w-64 + gap
+    // use viewport width fallback when card width is variable
+    const cardWidth = node.querySelector('a')?.clientWidth || Math.min(window.innerWidth, 300);
     node.scrollBy({ left: dir * cardWidth * 1.2, behavior: "smooth" });
   };
   return { ref, scrollBy } as const;
@@ -54,11 +55,23 @@ export default function Carousel({ title }: { title: string;}) {
             </button>
           </div>
         </div>
-        <div ref={ref} className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory">
-          {catRecipes.map((r, index) => (
-            <RecipeCard key={index} r={r} />
-          ))}
-        </div>  
+        <div className="relative">
+          <div ref={ref} className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory py-1">
+            {catRecipes.map((r, index) => (
+              <div className="shrink-0 w-full sm:w-56 sm:snap-center" key={index}>
+                <RecipeCard r={r} />
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile arrows overlay */}
+          <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+            <button aria-label="prev" onClick={() => scrollBy(-1)} className="p-2 m-2 rounded-full bg-[var(--card)] border border-[var(--border)] shadow">◀</button>
+          </div>
+          <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
+            <button aria-label="next" onClick={() => scrollBy(1)} className="p-2 m-2 rounded-full bg-[var(--card)] border border-[var(--border)] shadow">▶</button>
+          </div>
+        </div>
       </Container>
     </section>
   );

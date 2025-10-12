@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { useUser } from "../contexts/UserContext";
 import Container from "./Container";
 import SearchBar from "./SearchBar";
 import ThemeToggle from "./ThemeToggle";
-import profileImage from '../assets/profile.png';
+import profileImage from "../assets/profile.png";
 
 export default function NavbarPrimary() {
   const { user } = useUser();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="border-b border-[var(--border)] bg-[var(--bg)]/80 backdrop-blur supports-[backdrop-filter]:backdrop-blur sticky top-0 z-50">
       <Container className="flex h-16 items-center justify-between gap-4">
@@ -17,57 +20,42 @@ export default function NavbarPrimary() {
           AllInOneRecipes
         </a>
 
-        {/* Search + fridge + bookmarks */}
-        <div className="flex-1 flex justify-center">
+        {/* Desktop Search + Buttons */}
+        <div className="hidden md:flex flex-1 justify-center">
           <div className="flex items-center space-x-3 w-full max-w-3xl px-4">
             <div className="flex-1">
               <SearchBar />
             </div>
 
-            {/* Fridge button */}
+            {/* Fridge */}
             <a
               aria-label="Open fridge"
-              className="relative cursor-pointer inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[var(--primary)] text-white shadow-lg hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30"
               href="/fridge"
+              className="relative inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[var(--primary)] text-white shadow-lg hover:scale-105 transition-transform"
             >
-              <span
-                className="absolute inset-0 rounded-lg bg-[var(--primary)]/30"
-                aria-hidden
-              />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="48"
-                height="48"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                role="img"
-                aria-label="Fridge icon"
+                className="h-6 w-6"
               >
-              <rect x="5" y="3" width="14" height="18" rx="2"/>
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <rect x="15.5" y="6" width="1" height="2" rx=".5"/>
-              <rect x="15.5" y="14" width="1" height="2" rx=".5"/>
-              <line x1="8" y1="21" x2="8" y2="20"/>
-              <line x1="16" y1="21" x2="16" y2="20"/>
-            </svg>
-
-
+                <rect x="5" y="3" width="14" height="18" rx="2" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <rect x="15.5" y="6" width="1" height="2" rx=".5" />
+                <rect x="15.5" y="14" width="1" height="2" rx=".5" />
+              </svg>
             </a>
 
-            {/* Bookmark button */}
+            {/* Bookmarks */}
             <a
               aria-label="Bookmarked recipes"
-              className="relative cursor-pointer inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[var(--primary)] text-white shadow-lg hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30"
               href="/bookmarks"
+              className="relative inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[var(--primary)] text-white shadow-lg hover:scale-105 transition-transform"
             >
-              <span
-                className="absolute inset-0 rounded-lg bg-[var(--primary)]/30"
-                aria-hidden
-              />
               <svg
                 className="w-6 h-6"
                 viewBox="0 0 24 24"
@@ -78,21 +66,20 @@ export default function NavbarPrimary() {
               </svg>
             </a>
 
+            {/* Shopping List */}
             <a
-              aria-label="Shopping-list recipes"
-              className="relative cursor-pointer inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[var(--primary)] text-white shadow-lg hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/30"
+              aria-label="Shopping list"
               href="/shoppingList"
+              className="relative inline-flex items-center justify-center h-10 w-10 rounded-lg bg-[var(--primary)] text-white shadow-lg hover:scale-105 transition-transform"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={1.8}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className="h-6 w-6"
-                aria-hidden="true"
               >
                 <path d="M3 5h2l1 12h12l1.5-8H6" />
                 <circle cx="9" cy="19" r="1.5" />
@@ -102,8 +89,8 @@ export default function NavbarPrimary() {
           </div>
         </div>
 
-        {/* Auth + Profile + Theme */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* Desktop Auth + Theme */}
+        <div className="hidden md:flex items-center gap-2 sm:gap-3">
           {!user ? (
             <>
               <a
@@ -130,7 +117,78 @@ export default function NavbarPrimary() {
           )}
           <ThemeToggle />
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden flex items-center justify-center p-2 rounded-md text-[var(--fg)] hover:bg-[var(--border)]/20 transition"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-7 h-7"
+          >
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
       </Container>
+
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-[var(--border)] bg-[var(--bg)] flex flex-col gap-4 p-4 animate-in fade-in duration-150">
+          <SearchBar />
+
+          <div className="flex justify-around">
+            <a href="/fridge">Fridge</a>
+            <a href="/bookmarks">Bookmarks</a>
+            <a href="/shoppingList">Shopping</a>
+          </div>
+
+          <div className="flex flex-col gap-2 border-t border-[var(--border)] pt-3">
+            {!user ? (
+              <>
+                <a href="/login" className="text-[var(--fg)]">
+                  Sign in
+                </a>
+                <a
+                  href="/signup"
+                  className="bg-[var(--primary)] text-white px-3 py-1 rounded-lg text-center"
+                >
+                  Sign up
+                </a>
+              </>
+            ) : (
+              <a
+                href="/profile"
+                className="flex items-center gap-2 p-2 rounded-lg hover:bg-[var(--border)]/20"
+              >
+                <img
+                  src={user.img || profileImage}
+                  alt="Profile"
+                  className="w-8 h-8 rounded-full border border-[var(--border)]"
+                />
+                <span>Profile</span>
+              </a>
+            )}
+            <ThemeToggle />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
