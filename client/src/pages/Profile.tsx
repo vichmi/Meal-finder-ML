@@ -38,6 +38,7 @@ export default function Profile() {
       .post("/auth/logout", {}, { withCredentials: true })
       .then(() => {
         window.location.href = "/login";
+        localStorage.removeItem('token');
       })
       .catch((err:any) => console.error("Logout error:", err));
   };

@@ -19,10 +19,8 @@ return (
         }, { withCredentials: true })
         .then(res => {
           console.log(res.data);
-          if(res.status === 200) {
-            window.location.href = '/';
-            return;
-          }
+          localStorage.setItem('token', res.data.token);
+          return res.data;
         })
         .catch(err => {
           console.error(err);
