@@ -32,6 +32,7 @@ router.post('/addFridgeItem', authMiddleware, async(req, res) => {
             return res.status(404).json({message: 'user not found'});
         }
         const findUser = await User.findById(user.id);
+        if(findUser.fridge.indexOf(item) != -1) {return res.status(400).send({message: 'Already in fridge'})}
         findUser.fridge.push(item);
         await findUser.save();
         return res.status(200).json({message: 'Successfully saved item'});
@@ -49,6 +50,7 @@ router.post('/addShoppinglistItem', authMiddleware, async(req, res) => {
             return res.status(404).json({message: 'user not found'});
         }
         const findUser = await User.findById(user.id);
+        if(findUser.shoppingList.indexOf(item) != -1) {return res.status(400).send({message: 'Already in shoppingList'})}
         findUser.shoppingList.push(item);
         await findUser.save();
         return res.status(200).json({message: 'Successfully saved item'});

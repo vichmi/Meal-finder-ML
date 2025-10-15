@@ -20,6 +20,7 @@ return (
         .then(res => {
           console.log(res.data);
           localStorage.setItem('token', res.data.token);
+          window.location.href = '/';
           return res.data;
         })
         .catch(err => {

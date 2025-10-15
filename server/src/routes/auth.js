@@ -69,7 +69,8 @@ router.get('/profile', authMiddleware, async(req, res) => {
     res.json({ 
         diet: findUser.diet,
         img: findUser.profileImage ? process.env.SERVER_URL+findUser.profileImage : '',
-        createdRecipes: findUser.createdRecipes
+        createdRecipes: findUser.createdRecipes,
+        bookmarkedRecipes: findUser.bookmarkedRecipes
     });
 }); 
 
