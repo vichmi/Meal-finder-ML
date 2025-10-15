@@ -25,8 +25,15 @@ export default function Recipe() {
   const [shoppingList, setShoppingList] = useState<string[]>([]);
   const {user} = useUser();
   useEffect(() => {
+    axios.get('/auth/profile')
+    .then((res:any) => {
+      setBookmarked(res.data.bookmarkedRecipes.indexOf(id) != -1)
+    });
+  }, []);
+  useEffect(() => {
     axios.get(`/recipe/${id}`).then((res: any) => {
       setRecipe(res.data);
+      console.log(user)
     });
   }, [id]);
   useEffect(() => {

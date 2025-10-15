@@ -27,8 +27,8 @@ function App() {
   return (
     <BrowserRouter>
       <UserProvider>
-        <NavbarPrimary />
         <div className="min-h-dvh bg-[var(--bg)] text-[var(--fg)]">
+        <NavbarPrimary />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/signup' element={<Signup />} />

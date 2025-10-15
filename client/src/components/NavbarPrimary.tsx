@@ -162,7 +162,7 @@ export default function NavbarPrimary() {
           <div className="flex flex-col gap-2 border-t border-[var(--border)] pt-3">
             {!user ? (
               <>
-                <a href="/login" className="text-[var(--fg)]">
+                <a href="/login" className="bg-[var(--primary)] text-white px-3 py-1 rounded-lg text-center">
                   Sign in
                 </a>
                 <a
