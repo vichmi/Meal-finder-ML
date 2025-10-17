@@ -1,82 +1,105 @@
+from src.database.db import *
 import pandas as pd
+import spacy
+# from sklearn.feature_extraction.text import TfidVectorizer
+import re
+import nltk
 from sklearn.model_selection import train_test_split
-from datasets import Dataset, Value
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer, pipeline
-import numpy as np
-import torch
-import evaluate
-from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline 
+from sklearn.metrics import classification_report
+from transformers import pipeline
 
-model_name = 'bert-base-multilingual-cased'
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+collection = db['recipes_bg']
+cursor = collection.find({}, {'_id': 1, 'title': 1, 'ingredients': 1})
+recipe_data = list(cursor)
 
-df = pd.read_csv('./data/recipes.csv')
-df['category'] = ''
-ingredients_cols = [col for col in df.columns if col.startswith('ingredients[')]
-df['ingredients_combined'] = df[ingredients_cols].astype(str).apply(lambda x: ' '.join(x), axis=1)
-text_fields = ["title", "ingredients_combined"]
-df["text"] = df[text_fields].fillna("").apply(lambda x: " ".join(x), axis=1)
+df = pd.DataFrame(recipe_data)
 
+def concatenate_recipe_parts(row):
+    title = str(row['title'] if 'title' in row and row['title'] is not None else '')
+    ingredients = []
+    if 'ingredients' in row and isinstance(row['ingredients'], list):
+        ingredients = [str(item['name']) for item in row['ingredients'] if item is not None]
 
-classifier = pipeline('zero-shot-classification', model='facebook/bart-large-mnli')
-candidate_labels = ['Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Soup', 'Salad', 'Snack', 'Beverage']
-df['category'] = df['category'].apply(lambda x: classifier(x, candidate_labels)['labels'][0])
+    return title + ' ' + ' '.join(ingredients)
 
+df['recipe_text'] = df.apply(concatenate_recipe_parts, axis=1)
+df.drop(columns=['title', 'ingredients'], inplace=True, errors='ignore')
 
-'''
-train_df, test_df = train_test_split(df, test_size=0.2, stratify=df['category'])
+CANDIDATE_LABELS = [
+    'Закуска', 'Основно', 'Предястие', 'Десерт', 'Супа', 'Салата'
+]
 
-train_dataset = Dataset.from_pandas(train_df)
-test_dataset = Dataset.from_pandas(test_df)
-
-def tokenize(batch):
-    return tokenizer(batch['text'], padding='max_length', truncation=True)
-
-train_dataset = train_dataset.map(tokenize, batched=True)
-test_dataset = test_dataset.map(tokenize, batched=True)
-
-
-le = LabelEncoder()
-df['label'] = le.fit_transform(df['category'])
-
-train_dataset = train_dataset.add_column('labels', le.transform(train_dataset['category']))
-test_dataset = test_dataset.add_column('labels', le.transform(test_dataset['category']))
-train_dataset = train_dataset.cast_column("labels", Value("int64"))
-test_dataset = test_dataset.cast_column("labels", Value("int64"))
-num_labels = len(df["category"].unique())
-model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
-
-accuracy = evaluate.load('accuracy')
-
-def compute_metrics(p):
-    preds = np.argmax(p.predictions, axis=1)
-    return accuracy.compute(predictions=preds, references=p.label_ids)
-
-training_args = TrainingArguments(
-    output_dir="./results",
-    eval_strategy="epoch",
-    save_strategy="epoch",
-    learning_rate=2e-5,
-    per_device_train_batch_size=8,
-    per_device_eval_batch_size=8,
-    num_train_epochs=3,
-    weight_decay=0.01,
+print("Loading zero shot classification")
+classifier = pipeline(
+    "zero-shot-classification",
+    model='joeddav/xlm-roberta-large-xnli'
 )
 
-trainer = Trainer(
-    model=model,
-    args=training_args,
-    train_dataset=train_dataset,
-    eval_dataset=test_dataset,
-    tokenizer=tokenizer,
-    compute_metrics=compute_metrics,
-)
+print(f'Starting zero-shot classification for {len(df)} recipes..')
+batch_size = 100
+predictions = []
 
-trainer.train()
+for i in range(0, len(df), batch_size):
+    batch = df['recipe_text'].iloc[i:i + batch_size].tolist()
+    results = classifier(batch, CANDIDATE_LABELS, multi_label=False)
+    predicted_labels = [r['labels'][0] for r in results]
+    predictions.extend(predicted_labels)
 
-# text = "Спагети болонезе"
-# inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
-# outputs = model(**inputs)
-# pred = outputs.logits.argmax(dim=1).item()
-# category = le.inverse_transform([pred])[0]
-# print(category)'''
+    if (i + batch_size) % 500 == 0:
+        print(f'Processed {i + batch_size} recipes....')
+
+df['predicted_category'] = predictions
+
+print("\nZero-Shot Classification Complete!")
+print("Predicted Category Distribution:")
+print(df['predicted_category'].value_counts())
+
+# n = 700
+# df_sample = df.sample(n=n, random_state=42).copy()
+# df_to_label = df_sample[['_id', 'recipe_text']].copy()
+# df_to_label['category'] = ''
+
+# labeling_file_path = 'manual_recipes.csv'
+# df_to_label.to_csv(labeling_file_path, index=False, encoding='utf-8')
+
+
+# bulgarian_stopwords = [
+#     'на', 'и', 'да', 'с', 'в', 'от', 'за', 'към', 'по', 'като', 'под', 'през', 'след', 'до', 'го', 'се', 'а', 'но', 'или'
+# ]
+# nlp_bg = spacy.load('bg_pipeline')
+
+# def bulgairan_preprocessor(text):
+#     if not isinstance(text, str):
+#         return ''
+#     text = re.sub(r'[^а-яa-z\s]', '', text.lower())
+
+#     doc = nlp_bg(text)
+#     lemmas = [
+#         token.lemma_
+#         for token in doc
+#         if token.lemma_ not in bulgarian_stopwords and len(token.lemma_) > 2
+#     ]
+#     return ' '.join(lemmas)
+
+# df_labeled['processed_text'] = df_labeled['recipe_text'].apply(bulgairan_preprocessor)
+
+# X = df_labeled['processed_text']
+# y = df_labeled['category']
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
+
+# classification_pipeline = Pipeline([
+#     ('tfidf', TfidVectorizer()),
+#     ('classifier', LogisticRegression(max_iter=1000, multi_class='ovr', random_state=42))
+# ])
+
+# print("Training model...")
+# classification_pipeline.fit(X_train, y_train)
+# print("Training complete.")
+
+# # Evaluate model performance (optional but highly recommended)
+# y_pred = classification_pipeline.predict(X_test)
+# print("\n--- Model Evaluation ---")
+# print(classification_report(y_test, y_pred, zero_division=0))
+# print(f"Overall Accuracy: {classification_pipeline.score(X_test, y_test):.4f}")
